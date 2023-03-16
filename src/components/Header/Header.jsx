@@ -7,7 +7,9 @@ export default function Header() {
     <StyledHeader>
       <Container>
         <HeaderContent>
-          <img src={logo} alt="" width="40" />
+          <a href="#home">
+            <img src={logo} alt="" width="40" />
+          </a>
           <Nav />
         </HeaderContent>
       </Container>

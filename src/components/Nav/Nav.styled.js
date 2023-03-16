@@ -7,6 +7,8 @@ export const NavList = styled.ul`
   gap: 20px;
 `;
 
-export const NavItem = styled.li`
+export const NavItem = styled.li``;
+
+export const NavLink = styled.a`
   text-transform: uppercase;
 `;

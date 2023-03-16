@@ -1,4 +1,4 @@
-import { AboutMe, Contacts, Gallery, Hero, Skills } from "./";
+import { AboutMe, Contacts, Projects, Hero, Skills } from "./";
 import { Wrapper } from "./App.styled";
 
 export default function App() {
@@ -6,7 +6,7 @@ export default function App() {
     <Wrapper>
       <Hero />
       <Skills />
-      <Gallery />
+      <Projects />
       <AboutMe />
       <Contacts />
     </Wrapper>
