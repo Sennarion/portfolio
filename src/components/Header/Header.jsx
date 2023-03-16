@@ -1,0 +1,16 @@
+import { Container, Nav } from "../";
+import { StyledHeader, HeaderContent } from "./Header.styled";
+import logo from "../../assets/logo.svg";
+
+export default function Header() {
+  return (
+    <StyledHeader>
+      <Container>
+        <HeaderContent>
+          <img src={logo} alt="" width="40" />
+          <Nav />
+        </HeaderContent>
+      </Container>
+    </StyledHeader>
+  );
+}
