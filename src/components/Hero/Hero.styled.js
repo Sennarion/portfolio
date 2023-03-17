@@ -1,9 +1,15 @@
 import styled from "styled-components";
-import bg from "../../assets/bg.jpg";
+import { keyframes } from "styled-components";
+
+const textclip = keyframes`
+  to {
+    background-position: 200% center;
+  }
+`;
 
 export const Section = styled.section`
   height: 100vh;
-  padding-top: 60px;
+  padding-top: 80px;
   scroll-snap-align: center;
   display: flex;
   align-items: center;
@@ -19,14 +25,16 @@ export const LeftSide = styled.div`
   width: 40%;
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 `;
 
 export const RightSide = styled.div`
-  margin-top: 300px;
+  /* padding-top: 300px; */
   position: relative;
   width: 60%;
   height: 800px;
+  cursor: grab;
 
   &::before {
     content: "";
@@ -37,10 +45,14 @@ export const RightSide = styled.div`
 
     width: 400px;
     height: 400px;
-    border-radius: 50%;
-    background: url(${bg});
-    background-position: center;
-    background-size: cover;
+    border-radius: 160px 80px;
+    background: rgb(71, 85, 234);
+    background: linear-gradient(
+      45deg,
+      rgba(71, 85, 234, 1) 0%,
+      rgba(0, 208, 80, 1) 27%,
+      rgba(228, 255, 0, 1) 100%
+    );
   }
 `;
 
@@ -51,12 +63,27 @@ export const Title = styled.h1`
   margin-bottom: 20px;
 `;
 
-export const TitleAccent = styled.span`
-  color: #76d904;
-`;
-
 export const Subtitle = styled.h2`
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
+`;
+
+export const TitleAccent = styled.span`
+  background-image: linear-gradient(
+    -225deg,
+    #0887ff 0%,
+    #ff2b44 39%,
+    #93f53d 67%,
+    #e4ff00 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: ${textclip} 3s linear infinite reverse;
 `;

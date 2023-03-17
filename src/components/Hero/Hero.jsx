@@ -1,15 +1,16 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Stage } from "@react-three/drei";
-import { Scene, Container, Header } from "../";
+import { Scene, Container, Header, Button } from "..";
 import {
   Section,
   Content,
   LeftSide,
   RightSide,
   Title,
-  TitleAccent,
   Subtitle,
+  TitleAccent,
 } from "./Hero.styled";
+import { BsEyeFill } from "react-icons/bs";
 
 export default function Hero() {
   return (
@@ -24,20 +25,26 @@ export default function Hero() {
                 <br />
                 I'm Serhii,
                 <br />
-                frontend developer
+                <TitleAccent>frontend developer</TitleAccent>
               </Title>
               <Subtitle>
-                Like a tiny <TitleAccent>hummingbird</TitleAccent>, I'm flying
-                in search of new challenges and opportunities. I'm always on the
-                move and buzzing with energy and enthusiasm.
+                Like a tiny hummingbird, I'm flying in search of new challenges
+                and opportunities. I'm always on the move and buzzing with
+                energy and enthusiasm.
               </Subtitle>
             </div>
+            <a href="#projects">
+              <Button>
+                <BsEyeFill />
+                Check out projects
+              </Button>
+            </a>
           </LeftSide>
           <RightSide>
             <Canvas>
               <OrbitControls enableZoom={false} position={[10, 0, 0]} />
               <PerspectiveCamera makeDefault position={[10, 10, 10]} />
-              <Stage environment="city" intensity={2}>
+              <Stage intensity={2}>
                 <Scene />
               </Stage>
             </Canvas>

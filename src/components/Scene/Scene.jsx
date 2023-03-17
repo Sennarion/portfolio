@@ -3,7 +3,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/public/bird.glb");
+  const { nodes, materials, animations } = useGLTF("/bird.glb");
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -40,4 +40,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/public/bird.glb");
+useGLTF.preload("/bird.glb");

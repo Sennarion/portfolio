@@ -1,4 +1,15 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
+
+const bounce = keyframes`
+  70% { transform: translate(-50%, 0%); }
+  80% { transform: translate(-50%, -15%); }
+  90% { transform: translate(-50%, 0%); }
+  95% { transform: translate(-50%, -7%); }
+  97% { transform: translate(-50%, 0%); }
+  99% { transform: translate(-50%, -3%); }
+  100% { transform: translate(-50%, 0); }
+`;
 
 export const Wrapper = styled.div`
   height: 100vh;
@@ -11,4 +22,12 @@ export const Wrapper = styled.div`
   }
 
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+`;
+
+export const MouseContainer = styled.div`
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ${bounce} 2s infinite;
 `;

@@ -5,6 +5,7 @@ export { default as Header } from "./Header/Header";
 export { default as Hero } from "./Hero/Hero";
 export { default as Nav } from "./Nav/Nav";
 export { default as Scene } from "./Scene/Scene";
-export { default as Skills } from "./Skills/Skills";
+export { default as Button } from "./UI/Button/Button";
+export { default as Social } from "./Social/Social";
 
 export { Container } from "./Container/Container.styled";

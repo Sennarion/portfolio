@@ -1,4 +1,4 @@
-import { Container, Nav } from "../";
+import { Container, Nav } from "..";
 import { StyledHeader, HeaderContent } from "./Header.styled";
 import logo from "../../assets/logo.svg";
 
