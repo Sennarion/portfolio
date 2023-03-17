@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
-export default function Model(props) {
+export default function Bird(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/bird.glb");
   const { actions } = useAnimations(animations, group);

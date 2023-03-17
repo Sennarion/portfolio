@@ -9,10 +9,9 @@ export const Btn = styled.button`
   background-color: #e4ff00;
   border: none;
   border-radius: 12px 4px;
-  color: #f2f2f2;
+  color: #1f1f1f;
   transition: background-color 0.2s linear;
   cursor: pointer;
-  color: #111;
 
   &:hover,
   &:focus {

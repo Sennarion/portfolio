@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Stage } from "@react-three/drei";
-import { Scene, Container, Header, Button } from "..";
+import { Container, Bird, Button } from "..";
 import {
   Section,
   Content,
@@ -15,7 +15,6 @@ import { BsEyeFill } from "react-icons/bs";
 export default function Hero() {
   return (
     <Section id="home">
-      <Header />
       <Container>
         <Content>
           <LeftSide>
@@ -45,7 +44,7 @@ export default function Hero() {
               <OrbitControls enableZoom={false} position={[10, 0, 0]} />
               <PerspectiveCamera makeDefault position={[10, 10, 10]} />
               <Stage intensity={2}>
-                <Scene />
+                <Bird />
               </Stage>
             </Canvas>
           </RightSide>
