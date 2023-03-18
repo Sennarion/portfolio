@@ -1,5 +1,10 @@
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Stage } from "@react-three/drei";
+import {
+  ContactShadows,
+  OrbitControls,
+  PerspectiveCamera,
+} from "@react-three/drei";
 import { Container, Bird, Button } from "..";
 import {
   Section,
@@ -10,7 +15,6 @@ import {
   Subtitle,
   TitleAccent,
 } from "./Hero.styled";
-import { BsEyeFill } from "react-icons/bs";
 
 export default function Hero() {
   return (
@@ -37,13 +41,21 @@ export default function Hero() {
             </a>
           </LeftSide>
           <RightSide>
-            <Canvas>
-              <OrbitControls enableZoom={false} position={[10, 0, 0]} />
-              <PerspectiveCamera makeDefault position={[10, 10, 10]} />
-              <Stage intensity={2}>
-                <Bird />
-              </Stage>
-            </Canvas>
+            <Suspense fallback={null}>
+              <Canvas>
+                <ambientLight intensity={6} />
+                <directionalLight position={[8, 4, 0]} />
+                <ContactShadows
+                  position={[0, -3, 1]}
+                  blur={2}
+                  scale={30}
+                  far={6}
+                />
+                <OrbitControls enableZoom={false} />
+                <PerspectiveCamera makeDefault position={[8, 2, 20]} />
+                <Bird position={[0, -5, 0]} />
+              </Canvas>
+            </Suspense>
           </RightSide>
         </Content>
       </Container>

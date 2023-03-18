@@ -9,7 +9,6 @@ const textclip = keyframes`
 
 export const Section = styled.section`
   height: 100vh;
-  padding-top: 80px;
   scroll-snap-align: center;
   display: flex;
   align-items: center;
@@ -30,7 +29,7 @@ export const LeftSide = styled.div`
 `;
 
 export const RightSide = styled.div`
-  /* padding-top: 300px; */
+  /* padding-top: 100px; */
   position: relative;
   width: 60%;
   height: 800px;
@@ -39,13 +38,13 @@ export const RightSide = styled.div`
   &::before {
     content: "";
     position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 60%;
+    transform: translateX(-50%);
 
-    width: 400px;
-    height: 400px;
-    border-radius: 160px 80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100px 50px;
     background: rgb(71, 85, 234);
     background: linear-gradient(
       45deg,
