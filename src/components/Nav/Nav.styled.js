@@ -10,7 +10,7 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li``;
 
-export const NavLink = styled.button`
+export const NavButton = styled.button`
   background: none;
   text-transform: uppercase;
   padding: 8px;

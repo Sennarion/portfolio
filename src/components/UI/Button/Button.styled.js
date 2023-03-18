@@ -6,18 +6,19 @@ export const Btn = styled.button`
   align-items: center;
   gap: 10px;
   padding: 14px 30px;
-  background-color: #e4ff00;
-  border: none;
+  background: none;
+  border: 2px solid #e4ff00;
   border-radius: 12px 4px;
   text-transform: uppercase;
   line-height: 1;
-  color: #1f1f1f;
-  transition: background-color 0.2s linear;
+  color: #e4ff00;
+  transition: background-color 0.2s linear, color 0.2s linear;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: #93f53d;
+    background-color: #e4ff00;
+    color: #1f1f1f;
   }
 
   &:disabled {

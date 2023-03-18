@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Header, AboutMe, Contacts, ProjectsList, Hero, Social } from "./";
-import { Wrapper, MouseContainer } from "./App.styled";
+import { Wrapper, Section, MouseContainer } from "./App.styled";
 import { BsMouse } from "react-icons/bs";
 
 export default function App() {
@@ -17,18 +17,18 @@ export default function App() {
         projectsSection={projectsSection}
         contactsSection={contactsSection}
       />
-      <section ref={homeSection}>
+      <Section ref={homeSection}>
         <Hero />
-      </section>
-      <section ref={aboutMeSection}>
+      </Section>
+      <Section ref={aboutMeSection}>
         <AboutMe />
-      </section>
-      <section ref={projectsSection}>
+      </Section>
+      <Section ref={projectsSection}>
         <ProjectsList />
-      </section>
-      <section ref={contactsSection}>
+      </Section>
+      <Section ref={contactsSection}>
         <Contacts />
-      </section>
+      </Section>
       <MouseContainer>
         <BsMouse size={40} />
       </MouseContainer>

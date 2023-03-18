@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  align-items: center;
-`;
-
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;

@@ -29,3 +29,10 @@ export const MouseContainer = styled.div`
   transform: translateX(-50%);
   animation: ${bounce} 2s infinite;
 `;
+
+export const Section = styled.section`
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+`;

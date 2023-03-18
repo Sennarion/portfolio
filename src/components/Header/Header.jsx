@@ -12,9 +12,7 @@ export default function Header({
     <StyledHeader>
       <Container>
         <HeaderContent>
-          <a href="#home">
-            <img src={logo} alt="" width="40" />
-          </a>
+          <img src={logo} alt="" width="40" />
           <Nav
             homeSection={homeSection}
             aboutMeSection={aboutMeSection}

@@ -7,13 +7,6 @@ const textclip = keyframes`
   }
 `;
 
-export const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  align-items: center;
-`;
-
 export const Content = styled.div`
   display: flex;
   align-items: center;
@@ -29,7 +22,6 @@ export const LeftSide = styled.div`
 `;
 
 export const RightSide = styled.div`
-  /* padding-top: 100px; */
   position: relative;
   width: 60%;
   height: 800px;

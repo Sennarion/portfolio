@@ -1,5 +1,5 @@
-import { Section } from "./Contacts.styled";
+import { Container } from "..";
 
 export default function Contacts() {
-  return <Section id="contacts">Contacts</Section>;
+  return <Container>Contacts</Container>;
 }

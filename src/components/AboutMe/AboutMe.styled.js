@@ -1,15 +1,7 @@
 import styled from "styled-components";
 
-export const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  align-items: center;
-`;
-
 export const Title = styled.h2`
   font-family: "Nunito", sans-serif;
-
   font-size: 42px;
   margin-bottom: 40px;
   color: #e4ff00;
@@ -18,7 +10,6 @@ export const Title = styled.h2`
 export const Content = styled.div`
   position: relative;
   width: 100%;
-  /* border: 1px solid #e4ff00; */
   border-radius: 100px 40px;
   padding: 40px;
 `;
@@ -34,7 +25,6 @@ export const Avatar = styled.div`
 `;
 
 export const Description = styled.div`
-  /* width: 60%; */
   padding-left: 300px;
   line-height: 1.6;
   margin-bottom: 80px;
