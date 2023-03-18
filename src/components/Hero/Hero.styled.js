@@ -51,6 +51,7 @@ export const RightSide = styled.div`
       45deg,
       rgba(71, 85, 234, 1) 0%,
       rgba(0, 208, 80, 1) 27%,
+      rgba(228, 255, 0, 1) 70%,
       rgba(228, 255, 0, 1) 100%
     );
   }

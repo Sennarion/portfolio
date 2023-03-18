@@ -33,10 +33,7 @@ export default function Hero() {
               </Subtitle>
             </div>
             <a href="#projects">
-              <Button>
-                <BsEyeFill />
-                Check out projects
-              </Button>
+              <Button>Check out projects</Button>
             </a>
           </LeftSide>
           <RightSide>

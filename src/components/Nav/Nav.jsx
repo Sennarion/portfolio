@@ -23,7 +23,7 @@ export default function Nav() {
           <a href={cv} download="Serhii_Reznichenko_CV">
             <Button>
               <BsDownload />
-              Download CV
+              My CV
             </Button>
           </a>
         </NavItem>

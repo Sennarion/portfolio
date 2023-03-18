@@ -5,10 +5,12 @@ export const Btn = styled.button`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 10px 20px;
+  padding: 14px 30px;
   background-color: #e4ff00;
   border: none;
   border-radius: 12px 4px;
+  text-transform: uppercase;
+  line-height: 1;
   color: #1f1f1f;
   transition: background-color 0.2s linear;
   cursor: pointer;

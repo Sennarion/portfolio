@@ -1,6 +1,7 @@
 export { default as AboutMe } from "./AboutMe/AboutMe";
 export { default as Contacts } from "./Contacts/Contacts";
-export { default as Projects } from "./Projects/Projects";
+export { default as ProjectsList } from "./ProjectsList/ProjectsList";
+export { default as ProjectsItem } from "./ProjectsItem/ProjectsItem";
 export { default as Header } from "./Header/Header";
 export { default as SkillsList } from "./SkillsList/SkillsList";
 export { default as Hero } from "./Hero/Hero";
