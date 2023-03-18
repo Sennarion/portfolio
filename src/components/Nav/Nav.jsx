@@ -3,21 +3,30 @@ import { NavWrapper, NavList, NavItem, NavLink } from "./Nav.styled";
 import cv from "../../assets/Reznichenko_Serhii.pdf";
 import { BsDownload } from "react-icons/bs";
 
-export default function Nav() {
+export default function Nav({
+  homeSection,
+  aboutMeSection,
+  projectsSection,
+  contactsSection,
+}) {
+  const scrollTo = (section) => {
+    section.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <NavWrapper>
       <NavList>
         <NavItem>
-          <NavLink href="#home">Home</NavLink>
+          <NavLink onClick={() => scrollTo(homeSection)}>Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#aboutme">About me</NavLink>
+          <NavLink onClick={() => scrollTo(aboutMeSection)}>About me</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#projects">Projects</NavLink>
+          <NavLink onClick={() => scrollTo(projectsSection)}>Projects</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#contacts">Contacts</NavLink>
+          <NavLink onClick={() => scrollTo(contactsSection)}>Contacts</NavLink>
         </NavItem>
         <NavItem>
           <a href={cv} download="Serhii_Reznichenko_CV">

@@ -2,7 +2,12 @@ import { Container, Nav } from "..";
 import { StyledHeader, HeaderContent } from "./Header.styled";
 import logo from "../../assets/logo.svg";
 
-export default function Header() {
+export default function Header({
+  homeSection,
+  aboutMeSection,
+  projectsSection,
+  contactsSection,
+}) {
   return (
     <StyledHeader>
       <Container>
@@ -10,7 +15,12 @@ export default function Header() {
           <a href="#home">
             <img src={logo} alt="" width="40" />
           </a>
-          <Nav />
+          <Nav
+            homeSection={homeSection}
+            aboutMeSection={aboutMeSection}
+            projectsSection={projectsSection}
+            contactsSection={contactsSection}
+          />
         </HeaderContent>
       </Container>
     </StyledHeader>

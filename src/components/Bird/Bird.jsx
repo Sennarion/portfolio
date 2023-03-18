@@ -3,7 +3,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export default function Bird(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/bird.glb");
+  const { nodes, materials, animations } = useGLTF("/bird-transformed.glb");
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -20,9 +20,6 @@ export default function Bird(props) {
                 <group name="skeletal1_1">
                   <group name="GLTF_created_0">
                     <primitive object={nodes.GLTF_created_0_rootJoint} />
-                    <group name="humming_bird85_85_correction">
-                      <group name="humming_bird85_85" />
-                    </group>
                     <skinnedMesh
                       name="Object_91"
                       geometry={nodes.Object_91.geometry}
@@ -40,4 +37,4 @@ export default function Bird(props) {
   );
 }
 
-useGLTF.preload("/bird.glb");
+useGLTF.preload("/bird-transformed.glb");

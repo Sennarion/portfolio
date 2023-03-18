@@ -7,7 +7,7 @@ const textclip = keyframes`
   }
 `;
 
-export const Section = styled.section`
+export const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ListItem = styled.li`
   position: relative;
   width: calc((100% - 80px) / 3);
-  height: 350px;
+  height: 300px;
   text-align: center;
   color: #1f1f1f;
   -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);

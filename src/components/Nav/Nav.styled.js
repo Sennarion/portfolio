@@ -10,10 +10,14 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li``;
 
-export const NavLink = styled.a`
+export const NavLink = styled.button`
+  background: none;
   text-transform: uppercase;
   padding: 8px;
   transition: color 0.2s linear;
+  color: inherit;
+  border: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {

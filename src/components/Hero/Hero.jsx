@@ -43,8 +43,8 @@ export default function Hero() {
           <RightSide>
             <Suspense fallback={null}>
               <Canvas>
-                <ambientLight intensity={6} />
-                <directionalLight position={[8, 4, 0]} />
+                <ambientLight intensity={10} />
+                <directionalLight position={[10, 4, 0]} />
                 <ContactShadows
                   position={[0, -3, 1]}
                   blur={2}
