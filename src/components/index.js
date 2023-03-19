@@ -9,5 +9,6 @@ export { default as Nav } from "./Nav/Nav";
 export { default as Bird } from "./Bird/Bird";
 export { default as Button } from "./UI/Button/Button";
 export { default as Social } from "./Social/Social";
+export { default as Loader } from "./UI/Loader/Loader";
 
 export { Container } from "./Container/Container.styled";

@@ -4,15 +4,12 @@ import cv from "../../assets/Reznichenko_Serhii.pdf";
 import { BsDownload } from "react-icons/bs";
 
 export default function Nav({
+  scrollTo,
   homeSection,
   aboutMeSection,
   projectsSection,
   contactsSection,
 }) {
-  const scrollTo = (section) => {
-    section.current.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <NavWrapper>
       <NavList>

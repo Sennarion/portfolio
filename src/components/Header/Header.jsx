@@ -3,6 +3,7 @@ import { StyledHeader, HeaderContent } from "./Header.styled";
 import logo from "../../assets/logo.svg";
 
 export default function Header({
+  scrollTo,
   homeSection,
   aboutMeSection,
   projectsSection,
@@ -14,6 +15,7 @@ export default function Header({
         <HeaderContent>
           <img src={logo} alt="" width="40" />
           <Nav
+            scrollTo={scrollTo}
             homeSection={homeSection}
             aboutMeSection={aboutMeSection}
             projectsSection={projectsSection}

@@ -8,18 +8,14 @@ export const Title = styled.h2`
 `;
 
 export const Content = styled.div`
-  position: relative;
   width: 100%;
   border-radius: 100px 40px;
   padding: 40px;
 `;
 
 export const Avatar = styled.div`
-  position: absolute;
-  top: -40px;
-  left: -40px;
   width: 300px;
-  height: 300px;
+  /* border: 2px solid #e4ff00; */
   border-radius: 100px 40px;
   overflow: hidden;
 `;

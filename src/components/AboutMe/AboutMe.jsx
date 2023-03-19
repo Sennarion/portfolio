@@ -1,6 +1,6 @@
 import { Container, SkillsList } from "..";
 import { Title, Content, Description, Avatar } from "./AboutMe.styled";
-import avatar from "../../assets/avatar.jpg";
+import avatar from "../../assets/avatar.png";
 
 export default function AboutMe() {
   return (

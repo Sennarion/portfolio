@@ -25,7 +25,7 @@ export const projects = [
     isPersonal: false,
   },
   {
-    name: "ContactHub",
+    name: "ContactsHub",
     stack:
       "React - TypeScript - React Router - Redux Toolkit - Redux Thunk - REST API - Material UI",
     pageLink: "https://sennarion.github.io/contacthub/",

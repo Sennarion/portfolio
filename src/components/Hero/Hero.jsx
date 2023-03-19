@@ -14,7 +14,7 @@ import {
   TitleAccent,
 } from "./Hero.styled";
 
-export default function Hero() {
+export default function Hero({ scrollTo, projectsSection }) {
   return (
     <Container>
       <Content>
@@ -30,12 +30,14 @@ export default function Hero() {
             <Subtitle>
               Like a tiny hummingbird, I'm flying in search of new challenges
               and opportunities. I'm always on the move and buzzing with energy
-              and enthusiasm.
+              and enthusiasm. So if you're looking for a motivated candidate to
+              join your team, I'm ready to spread my wings and take flight
+              towards success.
             </Subtitle>
           </div>
-          <a href="#projects">
-            <Button>Check out projects</Button>
-          </a>
+          <Button onClick={() => scrollTo(projectsSection)}>
+            Check out projects
+          </Button>
         </LeftSide>
         <RightSide>
           <Canvas>

@@ -11,7 +11,7 @@ const bounce = keyframes`
   100% { transform: translate(-50%, 0); }
 `;
 
-export const Wrapper = styled.div`
+export const Main = styled.main`
   height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   scroll-snap-type: y mandatory;

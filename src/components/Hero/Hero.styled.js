@@ -37,7 +37,6 @@ export const RightSide = styled.div`
     width: 300px;
     height: 300px;
     border-radius: 100px 50px;
-    background: rgb(71, 85, 234);
     background: linear-gradient(
       45deg,
       rgba(71, 85, 234, 1) 0%,
