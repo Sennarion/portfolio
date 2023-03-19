@@ -42,6 +42,6 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  background-color: rgba(1, 1, 1, 1);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   z-index: 1000;
 `;

@@ -1,5 +1,5 @@
-import { Container, SkillsList } from "..";
-import { Title, Content, Description, Avatar } from "./AboutMe.styled";
+import { Container, Title } from "..";
+import { Content, Description, Avatar } from "./AboutMe.styled";
 import avatar from "../../assets/avatar.png";
 
 export default function AboutMe() {
@@ -19,7 +19,6 @@ export default function AboutMe() {
           quickly integrate into a team, thereby providing value to the company
           and its customers.
         </Description>
-        <SkillsList />
       </Content>
     </Container>
   );

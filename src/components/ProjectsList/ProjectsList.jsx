@@ -1,6 +1,6 @@
-import { Container, ProjectsItem } from "..";
+import { Container, ProjectsItem, Title } from "..";
 import { projects } from "~/data/projects";
-import { List, Title } from "./ProjectsList.styled";
+import { List } from "./ProjectsList.styled";
 
 export default function ProjectsList() {
   return (

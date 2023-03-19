@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const bounce = keyframes`
   70% { transform: translate(-50%, 0%); }

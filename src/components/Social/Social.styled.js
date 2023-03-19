@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const fade = keyframes`
   0% { fill: #f2f2f2; transform: scale(1); }

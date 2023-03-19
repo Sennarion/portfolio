@@ -14,7 +14,7 @@ export const NavButton = styled.button`
   background: none;
   text-transform: uppercase;
   padding: 8px;
-  transition: color 0.2s linear;
+  transition: color 0.2s linear, text-shadow 0.2s linear;
   color: inherit;
   border: none;
   cursor: pointer;
@@ -22,5 +22,6 @@ export const NavButton = styled.button`
   &:hover,
   &:focus {
     color: #e4ff00;
+    text-shadow: 0px 0px 6px #e4ff00;
   }
 `;

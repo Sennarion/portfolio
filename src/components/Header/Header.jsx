@@ -7,19 +7,19 @@ export default function Header({
   homeSection,
   aboutMeSection,
   projectsSection,
-  contactsSection,
+  skillsSection,
 }) {
   return (
     <StyledHeader>
       <Container>
         <HeaderContent>
-          <img src={logo} alt="" width="40" />
+          <img src={logo} alt="" width="44" />
           <Nav
             scrollTo={scrollTo}
             homeSection={homeSection}
             aboutMeSection={aboutMeSection}
             projectsSection={projectsSection}
-            contactsSection={contactsSection}
+            skillsSection={skillsSection}
           />
         </HeaderContent>
       </Container>

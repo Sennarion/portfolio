@@ -1,5 +1,4 @@
 export { default as AboutMe } from "./AboutMe/AboutMe";
-export { default as Contacts } from "./Contacts/Contacts";
 export { default as ProjectsList } from "./ProjectsList/ProjectsList";
 export { default as ProjectsItem } from "./ProjectsItem/ProjectsItem";
 export { default as Header } from "./Header/Header";
@@ -11,4 +10,5 @@ export { default as Button } from "./UI/Button/Button";
 export { default as Social } from "./Social/Social";
 export { default as Loader } from "./UI/Loader/Loader";
 
-export { Container } from "./Container/Container.styled";
+export { Container } from "./UI/Container/Container.styled";
+export { Title } from "./UI/Title/Title.styled";

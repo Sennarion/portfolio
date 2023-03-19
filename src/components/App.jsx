@@ -3,8 +3,8 @@ import {
   Header,
   Hero,
   AboutMe,
-  Contacts,
   ProjectsList,
+  SkillsList,
   Social,
   Loader,
 } from "./";
@@ -30,7 +30,7 @@ export default function App() {
   const homeSection = useRef();
   const aboutMeSection = useRef();
   const projectsSection = useRef();
-  const contactsSection = useRef();
+  const skillsSection = useRef();
 
   return (
     <>
@@ -38,8 +38,8 @@ export default function App() {
         scrollTo={scrollTo}
         homeSection={homeSection}
         aboutMeSection={aboutMeSection}
+        skillsSection={skillsSection}
         projectsSection={projectsSection}
-        contactsSection={contactsSection}
       />
       {isLoading && <Loader />}
       <Main>
@@ -49,11 +49,11 @@ export default function App() {
         <Section ref={aboutMeSection}>
           <AboutMe />
         </Section>
+        <Section ref={skillsSection}>
+          <SkillsList />
+        </Section>
         <Section ref={projectsSection}>
           <ProjectsList />
-        </Section>
-        <Section ref={contactsSection}>
-          <Contacts />
         </Section>
         <MouseContainer>
           <BsMouse size={40} />

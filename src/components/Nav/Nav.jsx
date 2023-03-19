@@ -8,29 +8,37 @@ export default function Nav({
   homeSection,
   aboutMeSection,
   projectsSection,
-  contactsSection,
+  skillsSection,
 }) {
+  const onBtnClick = (e, target) => {
+    scrollTo(target);
+    e.target.blur();
+  };
+
   return (
     <NavWrapper>
       <NavList>
         <NavItem>
-          <NavButton onClick={() => scrollTo(homeSection)}>Home</NavButton>
+          <NavButton onClick={(e) => onBtnClick(e, homeSection)}>
+            Home
+          </NavButton>
         </NavItem>
         <NavItem>
-          <NavButton onClick={() => scrollTo(aboutMeSection)}>
+          <NavButton onClick={(e) => onBtnClick(e, aboutMeSection)}>
             About me
           </NavButton>
         </NavItem>
         <NavItem>
-          <NavButton onClick={() => scrollTo(projectsSection)}>
-            Projects
+          <NavButton onClick={(e) => onBtnClick(e, skillsSection)}>
+            Skills
           </NavButton>
         </NavItem>
         <NavItem>
-          <NavButton onClick={() => scrollTo(contactsSection)}>
-            Contacts
+          <NavButton onClick={(e) => onBtnClick(e, projectsSection)}>
+            Projects
           </NavButton>
         </NavItem>
+
         <NavItem>
           <Button as="a" href={cv} download="Serhii_Reznichenko_CV">
             <BsDownload />
