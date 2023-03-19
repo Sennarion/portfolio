@@ -13,6 +13,20 @@ const spinning = keyframes`
     transform: rotate(1800deg);
   }`;
 
+export const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  background: ${({ theme }) => theme.colors.bgGradient};
+  z-index: 1000;
+`;
+
 export const Spinner = styled.div`
   display: inline-block;
   position: relative;
@@ -25,23 +39,10 @@ export const Spinner = styled.div`
     border-radius: 50%;
     width: 0;
     height: 0;
-    margin: 8px;
+    margin: ${({ theme }) => theme.spacing(2)};
     border: 32px solid;
-    border-color: #e4ff00 transparent #e4ff00 transparent;
+    border-color: ${({ theme }) => theme.colors.primary} transparent
+      ${({ theme }) => theme.colors.primary} transparent;
     animation: ${spinning} 1.2s infinite;
   }
-`;
-
-export const Backdrop = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  z-index: 1000;
 `;

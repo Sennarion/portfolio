@@ -4,30 +4,33 @@ export const Btn = styled.button`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 12px 30px;
+  gap: ${({ theme }) => theme.spacing(3)};
+  padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(8)};
   background: none;
-  border: 2px solid #e4ff00;
-  border-radius: 12px 4px;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ theme }) => theme.spacing(3)}
+    ${({ theme }) => theme.spacing(1)};
   text-transform: uppercase;
   line-height: 1;
-  color: #e4ff00;
-  transition: box-shadow 0.2s linear, text-shadow 0.2s linear;
+  color: ${({ theme }) => theme.colors.primary};
+  transition: box-shadow ${({ theme }) => theme.animation.cubicBezier},
+    text-shadow ${({ theme }) => theme.animation.cubicBezier};
   cursor: pointer;
 
   svg {
-    transition: filter 0.2s linear, text-shadow 0.2s linear;
+    transition: filter ${({ theme }) => theme.animation.cubicBezier},
+      text-shadow ${({ theme }) => theme.animation.cubicBezier};
   }
 
   &:hover,
   &:focus {
-    text-shadow: 0px 0px 6px #e4ff00;
-    -webkit-box-shadow: 0px 0px 6px 0px rgba(228, 255, 0, 1);
-    -moz-box-shadow: 0px 0px 6px 0px rgba(228, 255, 0, 1);
-    box-shadow: 0px 0px 6px 0px rgba(228, 255, 0, 1);
+    text-shadow: ${({ theme }) => theme.shadows.primaryShadow};
+    -webkit-box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
+    -moz-box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
+    box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
 
     svg {
-      filter: drop-shadow(0px 0px 10px #e4ff00);
+      filter: drop-shadow(0px 0px 10px ${({ theme }) => theme.colors.primary});
     }
   }
 `;

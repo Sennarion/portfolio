@@ -8,6 +8,7 @@ import {
   Social,
   Loader,
 } from "./";
+import { GlobalStyleComponent } from "~/styles/GlobalStyles.styled";
 import { Main, Section, MouseContainer } from "./App.styled";
 import { BsMouse } from "react-icons/bs";
 
@@ -60,6 +61,7 @@ export default function App() {
         </MouseContainer>
         <Social />
       </Main>
+      <GlobalStyleComponent />
     </>
   );
 }

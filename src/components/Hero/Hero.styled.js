@@ -14,59 +14,42 @@ export const Content = styled.div`
 
 export const LeftSide = styled.div`
   width: 40%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: ${({ theme }) => theme.spacing(6)};
 `;
 
 export const RightSide = styled.div`
   position: relative;
   width: 60%;
-  height: 800px;
+  height: ${({ theme }) => theme.spacing(200)};
   cursor: grab;
 
   &::before {
     content: "";
     position: absolute;
     top: 30%;
-    left: 60%;
-    transform: translateX(-50%);
-
-    width: 300px;
-    height: 300px;
-    border-radius: 100px 50px;
-    background: linear-gradient(
-      45deg,
-      rgba(71, 85, 234, 1) 0%,
-      rgba(0, 208, 80, 1) 27%,
-      rgba(228, 255, 0, 1) 70%,
-      rgba(228, 255, 0, 1) 100%
-    );
+    left: 30%;
+    width: ${({ theme }) => theme.spacing(80)};
+    height: ${({ theme }) => theme.spacing(80)};
+    border-radius: ${({ theme }) => theme.spacing(20)}
+      ${({ theme }) => theme.spacing(10)};
+    background: ${({ theme }) => theme.colors.primaryGradient};
   }
 `;
 
 export const Title = styled.h1`
-  font-family: "Nunito", sans-serif;
-  font-size: 48px;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  font-size: ${({ theme }) => theme.fontSizes.max};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  line-height: ${({ theme }) => theme.lineHeight.small};
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
 `;
 
-export const Subtitle = styled.h2`
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-`;
+export const Subtitle = styled.p``;
 
 export const TitleAccent = styled.span`
-  background-image: linear-gradient(
-    -225deg,
-    #0887ff 0%,
-    #ff2b44 39%,
-    #93f53d 67%,
-    #e4ff00 100%
-  );
+  background-image: ${({ theme }) => theme.colors.secondaryGradient};
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -74,6 +57,5 @@ export const TitleAccent = styled.span`
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   animation: ${textclip} 3s linear infinite reverse;
 `;

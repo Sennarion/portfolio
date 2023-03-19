@@ -1,18 +1,12 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 40px;
-  width: 100%;
-  border-radius: 100px 40px;
-  padding: 40px;
+  gap: ${({ theme }) => theme.spacing(10)};
 `;
 
-export const Avatar = styled.div`
-  border: 2px solid #e4ff00;
-  border-radius: 100px 40px;
-  overflow: hidden;
-`;
+export const Avatar = styled.div``;
 
 export const Description = styled.div``;

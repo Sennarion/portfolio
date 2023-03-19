@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: ${({ theme }) => theme.spacing(20)};
   display: flex;
   align-items: center;
   top: 0;

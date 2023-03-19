@@ -1,13 +1,17 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyleComponent = createGlobalStyle`
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  color: #f2f2f2;
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  color: ${({ theme }) => theme.colors.textColor};
+  line-height: ${({ theme }) => theme.lineHeight.regular};
 }
 
 *,
@@ -45,3 +49,4 @@ a {
   text-decoration: none;
   color: inherit;
 }
+`;

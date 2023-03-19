@@ -41,8 +41,9 @@ export default function Hero({ scrollTo, projectsSection }) {
         </LeftSide>
         <RightSide>
           <Canvas>
-            <ambientLight intensity={10} />
+            <ambientLight intensity={8} color="#e5ff00" />
             <directionalLight position={[10, 4, 0]} />
+            <directionalLight position={[-10, 20, 0]} />
             <ContactShadows position={[0, -3, 1]} blur={2} scale={30} far={6} />
             <OrbitControls enableZoom={false} />
             <PerspectiveCamera makeDefault position={[8, 2, 20]} />

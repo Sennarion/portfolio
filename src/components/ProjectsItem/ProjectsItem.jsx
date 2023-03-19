@@ -29,10 +29,10 @@ export default function ProjectsItem({
           <ListItemDescription>{stack}</ListItemDescription>
           <Links>
             <Link href={pageLink} target="_blank">
-              <BsEyeFill size={30} />
+              <BsEyeFill size={20} />
             </Link>
             <Link href={codeLink} target="_blank">
-              <BsCodeSlash size={30} />
+              <BsCodeSlash size={20} />
             </Link>
           </Links>
         </ListItemContent>

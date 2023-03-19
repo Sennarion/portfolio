@@ -1,9 +1,9 @@
 import styled, { keyframes } from "styled-components";
 
-const fade = keyframes`
-  0% { fill: #f2f2f2; transform: scale(1); }
-  5% { fill: #e4ff00; transform: scale(1.2);}
-  10% { fill: #f2f2f2; transform: scale(1);}
+const fade = ({ theme }) => keyframes`
+  0% { fill: ${theme.colors.textColor}; transform: scale(1); }
+  5% { fill: ${theme.colors.primary}; transform: scale(1.2);}
+  10% { fill: ${theme.colors.textColor}; transform: scale(1);}
 `;
 
 export const Icons = styled.div`
@@ -13,7 +13,7 @@ export const Icons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: ${({ theme }) => theme.spacing(5)};
 
   &:hover,
   &:focus {
@@ -25,7 +25,7 @@ export const Icons = styled.div`
 
 export const Link = styled.a`
   cursor: pointer;
-  transition: transform 0.2s linear;
+  transition: transform ${({ theme }) => theme.animation.cubicBezier};
 
   &:nth-of-type(2) {
     svg {
@@ -41,7 +41,8 @@ export const Link = styled.a`
 
   svg {
     animation: ${fade} 3s infinite;
-    transition: fill 0.2s linear;
+    transition: fill ${({ theme }) => theme.animation.cubicBezier},
+      filter ${({ theme }) => theme.animation.cubicBezier};
   }
 
   &:hover,
@@ -49,7 +50,8 @@ export const Link = styled.a`
     transform: scale(1.2);
 
     svg {
-      fill: #e4ff00;
+      fill: ${({ theme }) => theme.colors.primary};
+      filter: drop-shadow(0px 0px 2px ${({ theme }) => theme.colors.primary});
     }
   }
 `;
