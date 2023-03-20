@@ -1,6 +1,5 @@
-import { Container, Nav } from "..";
-import { StyledHeader, HeaderContent } from "./Header.styled";
-import logo from "../../assets/logo.svg";
+import { Container, Nav } from "~/components";
+import { StyledHeader, HeaderContent, Logo } from "./Header.styled";
 
 export default function Header({
   scrollTo,
@@ -13,7 +12,7 @@ export default function Header({
     <StyledHeader>
       <Container>
         <HeaderContent>
-          <img src={logo} alt="" width="44" />
+          <Logo onClick={() => scrollTo(homeSection)}>SR</Logo>
           <Nav
             scrollTo={scrollTo}
             homeSection={homeSection}

@@ -28,6 +28,7 @@ export const theme = Object.freeze({
     bold: 700,
   },
   lineHeight: {
+    default: 1,
     small: 1.2,
     regular: 1.6,
   },

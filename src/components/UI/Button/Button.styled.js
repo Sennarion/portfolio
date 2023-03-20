@@ -11,7 +11,7 @@ export const Btn = styled.button`
   border-radius: ${({ theme }) => theme.spacing(3)}
     ${({ theme }) => theme.spacing(1)};
   text-transform: uppercase;
-  line-height: 1;
+  line-height: ${({ theme }) => theme.lineHeight.default};
   color: ${({ theme }) => theme.colors.primary};
   transition: box-shadow ${({ theme }) => theme.animation.cubicBezier},
     text-shadow ${({ theme }) => theme.animation.cubicBezier};

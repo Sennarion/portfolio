@@ -1,5 +1,3 @@
-import { Container, Title } from "..";
-import { List, ListItem } from "./SkillsList.styled";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact } from "react-icons/di";
 import {
@@ -7,8 +5,11 @@ import {
   SiTypescript,
   SiStyledcomponents,
   SiJavascript,
+  SiFigma,
 } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
+import { Container, Title } from "~/components";
+import { List, ListItem } from "./SkillsList.styled";
 
 export default function SkillsList() {
   return (
@@ -46,6 +47,10 @@ export default function SkillsList() {
         <ListItem>
           <BsGit size={40} />
           GIT
+        </ListItem>
+        <ListItem>
+          <SiFigma size={40} />
+          Figma
         </ListItem>
       </List>
     </Container>

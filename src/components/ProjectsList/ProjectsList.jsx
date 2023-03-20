@@ -1,4 +1,4 @@
-import { Container, ProjectsItem, Title } from "..";
+import { Container, ProjectsItem, Title } from "~/components";
 import { projects } from "~/data/projects";
 import { List } from "./ProjectsList.styled";
 

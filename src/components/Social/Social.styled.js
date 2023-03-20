@@ -7,12 +7,10 @@ const fade = ({ theme }) => keyframes`
 `;
 
 export const Icons = styled.div`
+  display: none;
   position: fixed;
   right: 30px;
   bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: ${({ theme }) => theme.spacing(5)};
 
   &:hover,
@@ -20,6 +18,12 @@ export const Icons = styled.div`
     svg {
       animation: none;
     }
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

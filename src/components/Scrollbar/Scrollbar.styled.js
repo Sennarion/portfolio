@@ -10,29 +10,15 @@ const bounce = keyframes`
   100% { transform: translate(-50%, 0); }
 `;
 
-export const Main = styled.main`
-  height: 100vh;
-  background: ${({ theme }) => theme.colors.bgGradient};
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
 export const MouseContainer = styled.div`
+  display: none;
   position: fixed;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   animation: ${bounce} 2s infinite;
-`;
 
-export const Section = styled.section`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    display: block;
+  }
 `;

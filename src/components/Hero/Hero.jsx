@@ -4,7 +4,9 @@ import {
   OrbitControls,
   PerspectiveCamera,
 } from "@react-three/drei";
-import { Container, Bird, Button } from "..";
+import { Container, Bird, Button } from "~/components";
+import useMediaQuery from "~/hooks/useMediaQuery";
+import { theme } from "~/styles/theme";
 import {
   Content,
   LeftSide,
@@ -15,6 +17,8 @@ import {
 } from "./Hero.styled";
 
 export default function Hero({ scrollTo, projectsSection }) {
+  const isDesktop = useMediaQuery(`(min-width: ${theme.media.desktop})`);
+
   return (
     <Container>
       <Content>
@@ -34,10 +38,10 @@ export default function Hero({ scrollTo, projectsSection }) {
               join your team, I'm ready to spread my wings and take flight
               towards success.
             </Subtitle>
+            <Button onClick={() => scrollTo(projectsSection)}>
+              Check out projects
+            </Button>
           </div>
-          <Button onClick={() => scrollTo(projectsSection)}>
-            Check out projects
-          </Button>
         </LeftSide>
         <RightSide>
           <Canvas>
@@ -47,7 +51,7 @@ export default function Hero({ scrollTo, projectsSection }) {
             <ContactShadows position={[0, -3, 1]} blur={2} scale={30} far={6} />
             <OrbitControls enableZoom={false} />
             <PerspectiveCamera makeDefault position={[8, 2, 20]} />
-            <Bird position={[0, -5, 0]} />
+            <Bird position={isDesktop ? [0, -5, 0] : [0, -2, 0]} />
           </Canvas>
         </RightSide>
       </Content>

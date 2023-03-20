@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const ListItem = styled.li`
   position: relative;
-  width: calc((100% - 80px) / 3);
-  height: 300px;
+  flex-basis: 100%;
   text-align: center;
   color: ${({ theme }) => theme.colors.secondary};
   -webkit-box-shadow: ${({ theme }) => theme.shadows.secondaryShadow};
@@ -13,6 +12,14 @@ export const ListItem = styled.li`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.blue};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    flex-basis: calc((100% - 40px) / 2);
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    flex-basis: calc((100% - 80px) / 3);
   }
 `;
 

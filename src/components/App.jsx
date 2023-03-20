@@ -1,16 +1,17 @@
 import { useState, useRef, useEffect } from "react";
 import {
-  Header,
   Hero,
+  Header,
   AboutMe,
   ProjectsList,
   SkillsList,
   Social,
   Loader,
-} from "./";
+  Section,
+  Main,
+  Scrollbar,
+} from "~/components";
 import { GlobalStyleComponent } from "~/styles/GlobalStyles.styled";
-import { Main, Section, MouseContainer } from "./App.styled";
-import { BsMouse } from "react-icons/bs";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,9 +57,7 @@ export default function App() {
         <Section ref={projectsSection}>
           <ProjectsList />
         </Section>
-        <MouseContainer>
-          <BsMouse size={40} />
-        </MouseContainer>
+        <Scrollbar />
         <Social />
       </Main>
       <GlobalStyleComponent />

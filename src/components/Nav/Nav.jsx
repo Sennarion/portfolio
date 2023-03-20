@@ -1,7 +1,7 @@
-import { Button } from "..";
-import { NavWrapper, NavList, NavItem, NavButton } from "./Nav.styled";
-import cv from "../../assets/Reznichenko_Serhii.pdf";
 import { BsDownload } from "react-icons/bs";
+import { Button } from "~/components";
+import cv from "~/assets/Reznichenko_Serhii.pdf";
+import { NavWrapper, NavList, NavItem, NavButton } from "./Nav.styled";
 
 export default function Nav({
   scrollTo,
@@ -38,7 +38,6 @@ export default function Nav({
             Projects
           </NavButton>
         </NavItem>
-
         <NavItem>
           <Button as="a" href={cv} download="Serhii_Reznichenko_CV">
             <BsDownload />

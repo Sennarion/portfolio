@@ -1,3 +1,5 @@
+import { BsEyeFill, BsCodeSlash } from "react-icons/bs";
+import { MdGroups2, MdPerson2 } from "react-icons/md";
 import {
   ListItem,
   ListItemWrapper,
@@ -8,8 +10,6 @@ import {
   Link,
   Image,
 } from "./ProjectsItem.styled";
-import { BsEyeFill, BsCodeSlash } from "react-icons/bs";
-import { MdGroups2, MdPerson2 } from "react-icons/md";
 
 export default function ProjectsItem({
   name,

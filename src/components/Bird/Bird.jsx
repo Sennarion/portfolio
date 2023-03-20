@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import useMediaQuery from "~/hooks/useMediaQuery";
+import { theme } from "~/styles/theme";
 
 export default function Bird(props) {
   const group = useRef();
@@ -10,8 +12,10 @@ export default function Bird(props) {
     actions["Animation"].play();
   }, []);
 
+  const isDesktop = useMediaQuery(`(min-width: ${theme.media.desktop})`);
+
   return (
-    <group ref={group} {...props} dispose={null} scale={150}>
+    <group ref={group} {...props} dispose={null} scale={isDesktop ? 150 : 100}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">

@@ -9,9 +9,13 @@ html {
 
 body {
   font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.small};
   color: ${({ theme }) => theme.colors.textColor};
   line-height: ${({ theme }) => theme.lineHeight.regular};
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+  }
 }
 
 *,
@@ -48,5 +52,9 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
 }
 `;
