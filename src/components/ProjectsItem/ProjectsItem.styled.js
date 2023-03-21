@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const ListItem = styled.li`
   position: relative;
   flex-basis: 100%;
+  height: 300px;
   text-align: center;
   color: ${({ theme }) => theme.colors.secondary};
   -webkit-box-shadow: ${({ theme }) => theme.shadows.secondaryShadow};
   -moz-box-shadow: ${({ theme }) => theme.shadows.secondaryShadow};
   box-shadow: ${({ theme }) => theme.shadows.secondaryShadow};
   transition: background-color ${({ theme }) => theme.animation.cubicBezier};
+  border-radius: ${({ theme }) => theme.spacing(10)}
+    ${({ theme }) => theme.spacing(5)};
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.blue};
@@ -48,6 +51,8 @@ export const ListItemContent = styled.div`
   opacity: 0;
   transition: opacity ${({ theme }) => theme.animation.cubicBezier};
   background: ${({ theme }) => theme.colors.projectGradient};
+  border-radius: ${({ theme }) => theme.spacing(10)}
+    ${({ theme }) => theme.spacing(5)};
 
   ${ListItem}:hover & {
     opacity: 1;
@@ -97,5 +102,7 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
+  border-radius: ${({ theme }) => theme.spacing(10)}
+    ${({ theme }) => theme.spacing(5)};
 `;

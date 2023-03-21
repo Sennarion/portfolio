@@ -5,6 +5,7 @@ export const theme = Object.freeze({
     textColor: "#f2f2f2",
     white: "#ffffff",
     blue: "#0299f7",
+    grey: "#1a2532",
     primaryGradient:
       "linear-gradient(45deg, rgba(71, 85, 234, 1) 0%, rgba(0, 208, 80, 1) 27%, rgba(228, 255, 0, 1) 70%, rgba(228, 255, 0, 1) 100%)",
     secondaryGradient:
@@ -15,7 +16,7 @@ export const theme = Object.freeze({
   },
   fonts: {
     primary: "Montserrat, sans-serif",
-    secondary: "Nunito, sans-serif",
+    secondary: "Pacifico, cursive",
   },
   fontSizes: {
     small: "14px",

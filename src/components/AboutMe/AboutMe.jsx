@@ -6,8 +6,6 @@ import { qa } from "~/data/qa";
 import avatar from "~/assets/avatar.jpg";
 import {
   Content,
-  Info,
-  Description,
   Avatar,
   Accordion,
   AccordionItem,
@@ -32,25 +30,16 @@ export default function AboutMe() {
     <Container>
       <Title>About me</Title>
       <Content>
-        <Info>
-          <Avatar>
-            <img src={avatar} alt="avatar" width={400} />
-          </Avatar>
-          <Description>
-            I'm a detail-oriented frontend developer with expertise in HTML,
-            CSS, JavaScript, and React. I specialize in writing clean and
-            efficient code and am always eager to learn new technologies and
-            tackle complex challenges. I'm a fast-learner and can quickly
-            integrate into a team, thereby providing value to the company and
-            its customers.
-          </Description>
-        </Info>
-
+        <Avatar>
+          <img src={avatar} alt="avatar" width={600} />
+        </Avatar>
         <Accordion>
           {qa.map((item, idx) => (
             <AccordionItem key={item.question}>
               <AccordionHeader onClick={() => toggle(idx)}>
-                <AccordionTitle>{item.question}</AccordionTitle>
+                <AccordionTitle isOpened={selected === idx}>
+                  {item.question}
+                </AccordionTitle>
                 <AccordionIcon isOpen={selected === idx}>
                   <MdOutlineKeyboardArrowDown size={30} />
                 </AccordionIcon>

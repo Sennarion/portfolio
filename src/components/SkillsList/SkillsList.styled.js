@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing(4)};
-`;
+export const Content = styled.div``;
 
 export const List = styled.ul`
-  width: 50%;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(5)};
@@ -22,20 +18,22 @@ export const ListItem = styled.li`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing(4)};
-  border: 1px solid ${({ theme }) => theme.colors.white};
+  background: #1a2532;
+  border: 2px solid transparent;
   border-radius: ${({ theme }) => theme.spacing(4)}
     ${({ theme }) => theme.spacing(2)};
   padding: ${({ theme }) => theme.spacing(5)};
+  transition: box-shadow ${({ theme }) => theme.animation.cubicBezier},
+    border ${({ theme }) => theme.animation.cubicBezier},
+    color ${({ theme }) => theme.animation.cubicBezier};
+
+  &:hover {
+    box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
+  }
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-    flex-basis: calc((100% - 20px) / 2);
+    flex-basis: calc((100% - 40px) / 3);
   }
-`;
-
-export const Cloud = styled.div`
-  width: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.white};
-  border-radius: ${({ theme }) => theme.spacing(4)}
-    ${({ theme }) => theme.spacing(2)};
-  padding: ${({ theme }) => theme.spacing(5)};
 `;

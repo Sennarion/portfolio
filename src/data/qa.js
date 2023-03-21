@@ -1,5 +1,10 @@
 export const qa = [
   {
+    question: "Who am I?",
+    answer:
+      "I'm a detail-oriented frontend developer with expertise in HTML, CSS, JavaScript, and React. I specialize in writing clean and efficient code and am always eager to learn new technologies and tackle complex challenges. I'm a fast-learner and can quickly integrate into a team, thereby providing value to the company and its customers.",
+  },
+  {
     question: "Why did I choose frontend?",
     answer:
       "I love the feeling of satisfaction that comes from seeing the tangible results of my work. Being able to design and build beautiful, user-friendly interfaces that people enjoy using is incredibly rewarding to me. Ultimately, I believe that front-end development offers a unique opportunity to combine creativity with technical skill and make a real impact on the way people interact with technology. I am excited to continue pursuing this passion and to contribute my expertise to the development of engaging and impactful web applications.",

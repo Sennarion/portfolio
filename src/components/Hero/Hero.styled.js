@@ -73,7 +73,7 @@ export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.large};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight.small};
-  margin-bottom: ${({ theme }) => theme.spacing(4)};
+  margin-bottom: ${({ theme }) => theme.spacing(6)};
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     font-size: ${({ theme }) => theme.fontSizes.max};
