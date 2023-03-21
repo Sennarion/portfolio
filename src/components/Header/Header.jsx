@@ -1,5 +1,8 @@
 import { Container, Nav } from "~/components";
-import { StyledHeader, HeaderContent, Logo } from "./Header.styled";
+import useMediaQuery from "~/hooks/useMediaQuery";
+import { theme } from "~/styles/theme";
+import { StyledHeader, HeaderContent, Logo, Burger } from "./Header.styled";
+import { IoMenuOutline } from "react-icons/io5";
 
 export default function Header({
   scrollTo,
@@ -7,19 +10,28 @@ export default function Header({
   aboutMeSection,
   projectsSection,
   skillsSection,
+  toggleMenu,
 }) {
+  const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
+
   return (
     <StyledHeader>
       <Container>
         <HeaderContent>
           <Logo onClick={() => scrollTo(homeSection)}>SR</Logo>
-          <Nav
-            scrollTo={scrollTo}
-            homeSection={homeSection}
-            aboutMeSection={aboutMeSection}
-            projectsSection={projectsSection}
-            skillsSection={skillsSection}
-          />
+          {isTablet ? (
+            <Nav
+              scrollTo={scrollTo}
+              homeSection={homeSection}
+              aboutMeSection={aboutMeSection}
+              projectsSection={projectsSection}
+              skillsSection={skillsSection}
+            />
+          ) : (
+            <Burger onClick={toggleMenu}>
+              <IoMenuOutline size={20} />
+            </Burger>
+          )}
         </HeaderContent>
       </Container>
     </StyledHeader>

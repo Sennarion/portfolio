@@ -12,6 +12,12 @@ export const StyledHeader = styled.header`
   backdrop-filter: blur(5px);
 `;
 
+export const HeaderContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const Logo = styled.span`
   width: 44px;
   height: 44px;
@@ -34,8 +40,23 @@ export const Logo = styled.span`
   }
 `;
 
-export const HeaderContent = styled.div`
+export const Burger = styled.button`
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  background: none;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ theme }) => theme.spacing(3)}
+    ${({ theme }) => theme.spacing(1)};
+  color: ${({ theme }) => theme.colors.primary};
+  transition: box-shadow ${({ theme }) => theme.animation.cubicBezier};
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
+  }
 `;

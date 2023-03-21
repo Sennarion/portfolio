@@ -2,23 +2,38 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: ${({ theme }) => theme.spacing(10)};
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
 
 export const Avatar = styled.div`
-  width: 30%;
-  border-radius: ${({ theme }) => theme.spacing(20)}
-    ${({ theme }) => theme.spacing(5)};
+  border-radius: ${({ theme }) => theme.spacing(10)}
+    ${({ theme }) => theme.spacing(3)};
   overflow: hidden;
-  margin-bottom: ${({ theme }) => theme.spacing(6)};
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 30%;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    border-radius: ${({ theme }) => theme.spacing(20)}
+      ${({ theme }) => theme.spacing(5)};
+  }
 `;
 
 export const Accordion = styled.div`
-  width: 70%;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 70%;
+  }
 `;
 
 export const AccordionItem = styled.div`

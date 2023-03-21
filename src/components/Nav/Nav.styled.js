@@ -4,7 +4,8 @@ export const NavWrapper = styled.nav`
   display: none;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-    display: block;
+    display: flex;
+    gap: ${({ theme }) => theme.spacing(6)};
   }
 `;
 
@@ -18,16 +19,11 @@ export const NavList = styled.ul`
   }
 `;
 
-export const NavItem = styled.li``;
-
-export const NavButton = styled.button`
+export const NavItem = styled.li`
   text-transform: uppercase;
   padding: ${({ theme }) => theme.spacing(2)};
   transition: color ${({ theme }) => theme.animation.cubicBezier},
     text-shadow ${({ theme }) => theme.animation.cubicBezier};
-  color: inherit;
-  border: none;
-  background: none;
   cursor: pointer;
 
   &:hover,

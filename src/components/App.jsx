@@ -9,12 +9,18 @@ import {
   Loader,
   Section,
   Main,
+  MobileMenu,
   Scrollbar,
 } from "~/components";
 import { GlobalStyleComponent } from "~/styles/GlobalStyles.styled";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     const onPageLoad = () => {
@@ -42,6 +48,7 @@ export default function App() {
         aboutMeSection={aboutMeSection}
         skillsSection={skillsSection}
         projectsSection={projectsSection}
+        toggleMenu={toggleMenu}
       />
       {isLoading && <Loader />}
       <Main>
@@ -57,6 +64,7 @@ export default function App() {
         <Section ref={projectsSection}>
           <ProjectsList />
         </Section>
+        {isMenuOpen && <MobileMenu toggleMenu={toggleMenu} />}
         <Scrollbar />
         <Social />
       </Main>

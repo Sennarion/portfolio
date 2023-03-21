@@ -6,6 +6,7 @@ export { default as SkillsList } from "./SkillsList/SkillsList";
 export { default as Scrollbar } from "./Scrollbar/Scrollbar";
 export { default as Hero } from "./Hero/Hero";
 export { default as Nav } from "./Nav/Nav";
+export { default as MobileMenu } from "./MobileMenu/MobileMenu";
 export { default as Bird } from "./Bird/Bird";
 export { default as Button } from "./UI/Button/Button";
 export { default as Social } from "./Social/Social";

@@ -11,6 +11,7 @@ export const Container = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     max-width: ${({ theme }) => theme.media.tablet};
+    padding: 0 ${({ theme }) => theme.spacing(10)};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {

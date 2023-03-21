@@ -16,6 +16,7 @@ export const Btn = styled.button`
   transition: box-shadow ${({ theme }) => theme.animation.cubicBezier},
     text-shadow ${({ theme }) => theme.animation.cubicBezier};
   cursor: pointer;
+  outline: none;
 
   svg {
     transition: filter ${({ theme }) => theme.animation.cubicBezier},
