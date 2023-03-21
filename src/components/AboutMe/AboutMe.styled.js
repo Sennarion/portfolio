@@ -1,25 +1,25 @@
 import styled from "styled-components";
 
-export const Avatar = styled.div`
+export const Content = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing(10)};
+`;
+
+export const Info = styled.div`\
   width: 30%;
+`;
+
+export const Avatar = styled.div`
   border-radius: ${({ theme }) => theme.spacing(20)}
     ${({ theme }) => theme.spacing(5)};
   overflow: hidden;
+  margin-bottom: ${({ theme }) => theme.spacing(6)};
 `;
 
-export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing(10)};
-  margin-bottom: ${({ theme }) => theme.spacing(10)};
-`;
-
-export const Description = styled.div`
-  width: 70%;
-  margin-bottom: ${({ theme }) => theme.spacing(8)};
-`;
+export const Description = styled.div``;
 
 export const Accordion = styled.div`
+  width: 70%;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
