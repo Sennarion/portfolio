@@ -10,11 +10,9 @@ export default function Social() {
       >
         <FaLinkedin size={30} />
       </Link>
-
       <Link href="https://github.com/Sennarion" target="_blank">
         <FaGithub size={30} />
       </Link>
-
       <Link href="https://t.me/sennarion" target="_blank">
         <FaTelegram size={30} />
       </Link>

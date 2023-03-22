@@ -52,16 +52,16 @@ export default function App() {
       />
       {isLoading && <Loader />}
       <Main>
-        <Section ref={homeSection}>
+        <Section ref={homeSection} id="hero">
           <Hero scrollTo={scrollTo} projectsSection={projectsSection} />
         </Section>
-        <Section ref={aboutMeSection}>
+        <Section ref={aboutMeSection} id="aboutme">
           <AboutMe />
         </Section>
-        <Section ref={skillsSection}>
+        <Section ref={skillsSection} id="skills">
           <SkillsList />
         </Section>
-        <Section ref={projectsSection}>
+        <Section ref={projectsSection} id="projects">
           <ProjectsList />
         </Section>
         {isMenuOpen && <MobileMenu toggleMenu={toggleMenu} />}
