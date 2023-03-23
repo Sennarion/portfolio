@@ -2,6 +2,7 @@ export { default as AboutMe } from "./AboutMe/AboutMe";
 export { default as ProjectsList } from "./ProjectsList/ProjectsList";
 export { default as ProjectsItem } from "./ProjectsItem/ProjectsItem";
 export { default as Header } from "./Header/Header";
+export { default as Footer } from "./Footer/Footer";
 export { default as SkillsList } from "./SkillsList/SkillsList";
 export { default as Scrollbar } from "./Scrollbar/Scrollbar";
 export { default as Hero } from "./Hero/Hero";
