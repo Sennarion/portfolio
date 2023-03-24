@@ -5,9 +5,12 @@ export const Section = styled.section`
   align-items: center;
   padding: ${({ theme }) => theme.spacing(10)} 0;
 
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    padding: ${({ theme }) => theme.spacing(20)} 0;
+  }
+
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     height: 100vh;
     scroll-snap-align: center;
-    padding: ${({ theme }) => theme.spacing(20)} 0;
   }
 `;
