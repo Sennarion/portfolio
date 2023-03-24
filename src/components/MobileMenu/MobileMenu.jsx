@@ -13,7 +13,7 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
               <StyledLink
                 to="hero"
                 smooth={true}
-                offset={0}
+                offset={-40}
                 duration={500}
                 delay={200}
                 onClick={toggleMenu}>
@@ -24,7 +24,7 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
               <StyledLink
                 to="aboutme"
                 smooth={true}
-                offset={0}
+                offset={-40}
                 duration={500}
                 delay={200}
                 onClick={toggleMenu}>
@@ -35,7 +35,7 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
               <StyledLink
                 to="skills"
                 smooth={true}
-                offset={0}
+                offset={-40}
                 duration={500}
                 delay={200}
                 onClick={toggleMenu}>
@@ -46,7 +46,7 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
               <StyledLink
                 to="projects"
                 smooth={true}
-                offset={0}
+                offset={-40}
                 duration={500}
                 delay={200}
                 onClick={toggleMenu}>

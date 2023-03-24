@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const textclip = keyframes`
   to {
@@ -8,11 +8,14 @@ const textclip = keyframes`
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
+  min-height: calc(100vh - 80px);
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     flex-direction: row;
+    min-height: auto;
   }
 `;
 
@@ -28,26 +31,24 @@ export const LeftSide = styled.div`
 export const RightSide = styled.div`
   width: 100%;
   position: relative;
-  height: ${({ theme }) => theme.spacing(100)};
+  height: 200px;
   cursor: grab;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: ${({ theme }) => theme.spacing(40)};
     height: ${({ theme }) => theme.spacing(40)};
-    border-radius: ${({ theme }) => theme.spacing(10)}
-      ${({ theme }) => theme.spacing(5)};
+    border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(5)};
     background: ${({ theme }) => theme.colors.primaryGradient};
 
     @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
       width: ${({ theme }) => theme.spacing(60)};
       height: ${({ theme }) => theme.spacing(60)};
-      border-radius: ${({ theme }) => theme.spacing(14)}
-        ${({ theme }) => theme.spacing(7)};
+      border-radius: ${({ theme }) => theme.spacing(14)} ${({ theme }) => theme.spacing(7)};
       top: 30%;
       left: 30%;
       transform: translate(0, 0);
@@ -56,8 +57,7 @@ export const RightSide = styled.div`
     @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
       width: ${({ theme }) => theme.spacing(80)};
       height: ${({ theme }) => theme.spacing(80)};
-      border-radius: ${({ theme }) => theme.spacing(20)}
-        ${({ theme }) => theme.spacing(10)};
+      border-radius: ${({ theme }) => theme.spacing(20)} ${({ theme }) => theme.spacing(10)};
     }
   }
 

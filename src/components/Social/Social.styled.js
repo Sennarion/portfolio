@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const fade = ({ theme }) => keyframes`
   0% { fill: ${theme.colors.textColor}; transform: scale(1); }
@@ -7,10 +7,7 @@ const fade = ({ theme }) => keyframes`
 `;
 
 export const Icons = styled.div`
-  display: none;
-  position: fixed;
-  right: 30px;
-  bottom: 40px;
+  display: flex;
   gap: ${({ theme }) => theme.spacing(5)};
 
   &:hover,
@@ -21,13 +18,20 @@ export const Icons = styled.div`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: ${({ theme }) => theme.spacing(2)};
+
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
   }
 `;
 
 export const Link = styled.a`
+  display: block;
+
+  padding: ${({ theme }) => theme.spacing(2)};
   cursor: pointer;
   transition: transform ${({ theme }) => theme.animation.cubicBezier};
 
@@ -44,6 +48,7 @@ export const Link = styled.a`
   }
 
   svg {
+    display: block;
     animation: ${fade} 3s infinite;
     transition: fill ${({ theme }) => theme.animation.cubicBezier},
       filter ${({ theme }) => theme.animation.cubicBezier};

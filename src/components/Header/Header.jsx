@@ -1,8 +1,8 @@
-import { Container, Nav } from "~/components";
-import useMediaQuery from "~/hooks/useMediaQuery";
-import { theme } from "~/styles/theme";
-import { StyledHeader, HeaderContent, Logo, Burger } from "./Header.styled";
-import { IoMenuOutline } from "react-icons/io5";
+import { Sling as Hamburger } from 'hamburger-react';
+import { Container, Nav } from '~/components';
+import useMediaQuery from '~/hooks/useMediaQuery';
+import { theme } from '~/styles/theme';
+import { StyledHeader, HeaderContent, Logo } from './Header.styled';
 
 export default function Header({
   scrollTo,
@@ -11,6 +11,7 @@ export default function Header({
   projectsSection,
   skillsSection,
   toggleMenu,
+  isMenuOpen
 }) {
   const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
 
@@ -28,9 +29,13 @@ export default function Header({
               skillsSection={skillsSection}
             />
           ) : (
-            <Burger onClick={toggleMenu}>
-              <IoMenuOutline size={20} />
-            </Burger>
+            <Hamburger
+              size={20}
+              toggled={isMenuOpen}
+              onToggle={toggleMenu}
+              color={theme.colors.primary}
+              rounded
+            />
           )}
         </HeaderContent>
       </Container>

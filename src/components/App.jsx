@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from "react";
-import useMediaQuery from "~/hooks/useMediaQuery";
-import { theme } from "~/styles/theme";
+import { useState, useRef, useEffect } from 'react';
+import useMediaQuery from '~/hooks/useMediaQuery';
+import { theme } from '~/styles/theme';
 import {
   Hero,
   Header,
@@ -12,9 +12,9 @@ import {
   Section,
   Main,
   MobileMenu,
-  Scrollbar,
-} from "~/components";
-import { GlobalStyleComponent } from "~/styles/GlobalStyles.styled";
+  Scrollbar
+} from '~/components';
+import { GlobalStyleComponent } from '~/styles/GlobalStyles.styled';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,12 +37,21 @@ export default function App() {
       setIsLoading(false);
     };
 
-    window.addEventListener("load", onPageLoad);
-    return () => window.removeEventListener("load", onPageLoad);
+    window.addEventListener('load', onPageLoad);
+    return () => window.removeEventListener('load', onPageLoad);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.documentElement.style.overflow = 'hidden';
+      return;
+    }
+
+    document.documentElement.style.overflow = 'auto';
+  }, [isMenuOpen]);
+
   const scrollTo = (section) => {
-    section.current.scrollIntoView({ behavior: "smooth" });
+    section.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const homeSection = useRef();
@@ -59,6 +68,7 @@ export default function App() {
         skillsSection={skillsSection}
         projectsSection={projectsSection}
         toggleMenu={toggleMenu}
+        isMenuOpen={isMenuOpen}
       />
       {isLoading && <Loader />}
       <Main>
@@ -76,7 +86,7 @@ export default function App() {
         </Section>
         <MobileMenu toggleMenu={toggleMenu} isOpen={isMenuOpen} />
         <Scrollbar />
-        <Social />
+        {isTablet && <Social />}
       </Main>
       <GlobalStyleComponent />
     </>

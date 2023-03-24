@@ -1,15 +1,15 @@
-import React, { useRef, useEffect } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
-import useMediaQuery from "~/hooks/useMediaQuery";
-import { theme } from "~/styles/theme";
+import React, { useRef, useEffect } from 'react';
+import { useGLTF, useAnimations } from '@react-three/drei';
+import useMediaQuery from '~/hooks/useMediaQuery';
+import { theme } from '~/styles/theme';
 
 export default function Bird(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/bird-transformed.glb");
+  const { nodes, materials, animations } = useGLTF('/bird-transformed.glb');
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    actions["Animation"].play();
+    actions['Animation'].play();
   }, [actions]);
 
   const isDesktop = useMediaQuery(`(min-width: ${theme.media.desktop})`);
@@ -41,4 +41,4 @@ export default function Bird(props) {
   );
 }
 
-useGLTF.preload("/bird-transformed.glb");
+useGLTF.preload('/bird-transformed.glb');
