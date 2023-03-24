@@ -10,7 +10,7 @@ export default function Bird(props) {
 
   useEffect(() => {
     actions["Animation"].play();
-  }, []);
+  }, [actions]);
 
   const isDesktop = useMediaQuery(`(min-width: ${theme.media.desktop})`);
 

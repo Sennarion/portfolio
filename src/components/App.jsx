@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import useMediaQuery from "~/hooks/useMediaQuery";
+import { theme } from "~/styles/theme";
 import {
   Hero,
   Header,
@@ -21,6 +23,14 @@ export default function App() {
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
+
+  useEffect(() => {
+    if (isTablet) {
+      setIsMenuOpen(false);
+    }
+  }, [isTablet]);
 
   useEffect(() => {
     const onPageLoad = () => {
@@ -64,7 +74,7 @@ export default function App() {
         <Section ref={projectsSection} id="projects">
           <ProjectsList />
         </Section>
-        {isMenuOpen && <MobileMenu toggleMenu={toggleMenu} />}
+        <MobileMenu toggleMenu={toggleMenu} isOpen={isMenuOpen} />
         <Scrollbar />
         <Social />
       </Main>

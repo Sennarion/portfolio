@@ -1,20 +1,13 @@
-import { BsDownload } from "react-icons/bs";
-import { Container, Button, Social } from "~/components";
-import {
-  Menu,
-  Content,
-  LinksList,
-  LinksItem,
-  StyledLink,
-} from "./MobileMenu.styled";
-import cv from "~/assets/Reznichenko_Serhii.pdf";
+import { BsDownload } from 'react-icons/bs';
+import { Container, Button, Social } from '~/components';
+import { Menu, Content, LinksList, LinksItem, StyledLink } from './MobileMenu.styled';
+import cv from '~/assets/Reznichenko_Serhii.pdf';
 
-export default function MobileMenu({ toggleMenu }) {
+export default function MobileMenu({ toggleMenu, isOpen }) {
   return (
-    <Menu>
+    <Menu isOpen={isOpen}>
       <Container>
         <Content>
-          {/* <button onClick={toggleMenu}>Close</button> */}
           <LinksList>
             <LinksItem>
               <StyledLink
@@ -22,8 +15,8 @@ export default function MobileMenu({ toggleMenu }) {
                 smooth={true}
                 offset={0}
                 duration={500}
-                onClick={toggleMenu}
-              >
+                delay={200}
+                onClick={toggleMenu}>
                 Home
               </StyledLink>
             </LinksItem>
@@ -33,8 +26,8 @@ export default function MobileMenu({ toggleMenu }) {
                 smooth={true}
                 offset={0}
                 duration={500}
-                onClick={toggleMenu}
-              >
+                delay={200}
+                onClick={toggleMenu}>
                 About me
               </StyledLink>
             </LinksItem>
@@ -44,8 +37,8 @@ export default function MobileMenu({ toggleMenu }) {
                 smooth={true}
                 offset={0}
                 duration={500}
-                onClick={toggleMenu}
-              >
+                delay={200}
+                onClick={toggleMenu}>
                 Skills
               </StyledLink>
             </LinksItem>
@@ -55,8 +48,8 @@ export default function MobileMenu({ toggleMenu }) {
                 smooth={true}
                 offset={0}
                 duration={500}
-                onClick={toggleMenu}
-              >
+                delay={200}
+                onClick={toggleMenu}>
                 Projects
               </StyledLink>
             </LinksItem>

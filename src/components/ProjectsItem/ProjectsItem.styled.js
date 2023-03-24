@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ListItem = styled.li`
   position: relative;
   flex-basis: 100%;
-  height: 300px;
   text-align: center;
   color: ${({ theme }) => theme.colors.secondary};
   -webkit-box-shadow: ${({ theme }) => theme.shadows.secondaryShadow};
@@ -23,6 +22,7 @@ export const ListItem = styled.li`
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     flex-basis: calc((100% - 80px) / 3);
+    height: 250px;
   }
 `;
 
