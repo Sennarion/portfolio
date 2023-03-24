@@ -8,7 +8,6 @@ import {
   ProjectsList,
   SkillsList,
   Social,
-  Loader,
   Section,
   Main,
   MobileMenu,
@@ -17,29 +16,18 @@ import {
 import { GlobalStyleComponent } from '~/styles/GlobalStyles.styled';
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
-
   useEffect(() => {
     if (isTablet) {
       setIsMenuOpen(false);
     }
   }, [isTablet]);
-
-  useEffect(() => {
-    const onPageLoad = () => {
-      setIsLoading(false);
-    };
-
-    window.addEventListener('load', onPageLoad);
-    return () => window.removeEventListener('load', onPageLoad);
-  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -70,7 +58,6 @@ export default function App() {
         toggleMenu={toggleMenu}
         isMenuOpen={isMenuOpen}
       />
-      {isLoading && <Loader />}
       <Main>
         <Section ref={homeSection} id="hero">
           <Hero scrollTo={scrollTo} projectsSection={projectsSection} />
