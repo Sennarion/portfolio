@@ -16,8 +16,8 @@ import {
   AccordionIcon,
   AccordionContent
 } from './AboutMe.styled';
-
-import { IoLocation } from 'react-icons/io5';
+import { FaLinkedin, FaGithub, FaTelegram } from 'react-icons/fa';
+import { IoLocation, IoMail } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 
 export default function AboutMe() {
@@ -46,7 +46,32 @@ export default function AboutMe() {
             </Contact>
             <Contact>
               <IoIosCall size={20} />
-              +38 099 064 84 14
+              <a href="tel:+380990648414">+38 099 064 84 14</a>
+            </Contact>
+            <Contact>
+              <IoMail size={20} />
+              <a href="mailto:dev.serhiireznichenko@gmail.com">dev.serhiireznichenko@gmail.com</a>
+            </Contact>
+            <Contact>
+              <FaTelegram size={20} />
+              <a href="https://t.me/sennarion" rel="noreferrer" target="_blank">
+                Telegram
+              </a>
+            </Contact>
+            <Contact>
+              <FaLinkedin size={20} />
+              <a
+                href="https://www.linkedin.com/in/serhii-reznichenko/"
+                rel="noreferrer"
+                target="_blank">
+                LinkedIn
+              </a>
+            </Contact>
+            <Contact>
+              <FaGithub size={20} />
+              <a href="https://github.com/Sennarion" rel="noreferrer" target="_blank">
+                GitHub
+              </a>
             </Contact>
           </Description>
           <Accordion>

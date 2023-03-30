@@ -7,6 +7,15 @@ export const ListItem = styled.li`
   /* border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(5)}; */
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.grey};
+  border: 2px solid ${({ theme }) => theme.colors.grey};
+
+  transition: box-shadow ${({ theme }) => theme.animation.cubicBezier},
+    border ${({ theme }) => theme.animation.cubicBezier};
+
+  &:hover {
+    box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const ListItemContent = styled.div`

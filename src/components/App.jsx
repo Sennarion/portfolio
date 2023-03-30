@@ -46,7 +46,7 @@ export default function App() {
         <SkillsList />
         <ProjectsList />
         <MobileMenu toggleMenu={toggleMenu} isOpen={isMenuOpen} />
-        {isTablet && <Social />}
+        {/* {isTablet && <Social />} */}
       </Main>
       <Footer />
       <GlobalStyleComponent />
