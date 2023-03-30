@@ -8,7 +8,7 @@ export default function ProjectsList() {
       <Container>
         <Title>My projects</Title>
         <List>
-          {projects.map(({ name, stack, pageLink, codeLink, img, isPersonal }) => (
+          {projects.map(({ name, stack, pageLink, codeLink, img, isPersonal, description }) => (
             <ProjectsItem
               key={name}
               name={name}
@@ -17,6 +17,7 @@ export default function ProjectsList() {
               codeLink={codeLink}
               img={img}
               isPersonal={isPersonal}
+              description={description}
             />
           ))}
         </List>

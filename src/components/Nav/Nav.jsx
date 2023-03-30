@@ -9,7 +9,7 @@ export default function Nav() {
     <NavWrapper>
       <NavList>
         {nav.map(({ section, path }) => (
-          <NavItem>
+          <NavItem key={path}>
             <NavLink to={path} smooth={true} offset={-40} duration={500}>
               {section}
             </NavLink>

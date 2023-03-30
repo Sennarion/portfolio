@@ -11,7 +11,7 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
         <Content>
           <LinksList>
             {nav.map(({ section, path }) => (
-              <LinksItem>
+              <LinksItem key={path}>
                 <NavLink
                   to={path}
                   smooth={true}

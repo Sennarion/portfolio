@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Content = styled.div`
   display: flex;
@@ -11,19 +11,26 @@ export const Content = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
-  border-radius: ${({ theme }) => theme.spacing(10)}
-    ${({ theme }) => theme.spacing(3)};
-  overflow: hidden;
-
+export const Description = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     width: 30%;
   }
+`;
+
+export const Avatar = styled.div`
+  border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(3)};
+  overflow: hidden;
+  margin-bottom: ${({ theme }) => theme.spacing(8)};
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
-    border-radius: ${({ theme }) => theme.spacing(20)}
-      ${({ theme }) => theme.spacing(5)};
+    border-radius: ${({ theme }) => theme.spacing(20)} ${({ theme }) => theme.spacing(5)};
   }
+`;
+
+export const Contact = styled.p`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing(4)};
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
 `;
 
 export const Accordion = styled.div`
@@ -37,8 +44,7 @@ export const Accordion = styled.div`
 `;
 
 export const AccordionItem = styled.div`
-  border-radius: ${({ theme }) => theme.spacing(4)}
-    ${({ theme }) => theme.spacing(2)};
+  border-radius: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)};
   overflow: hidden;
 `;
 
@@ -52,17 +58,15 @@ export const AccordionHeader = styled.div`
 `;
 
 export const AccordionTitle = styled.h3`
-  color: ${({ theme, isOpened }) =>
-    isOpened ? theme.colors.primary : theme.colors.textColor};
+  color: ${({ theme, isOpened }) => (isOpened ? theme.colors.primary : theme.colors.textColor)};
   transition: color ${({ theme }) => theme.animation.cubicBezier};
 `;
 
 export const AccordionIcon = styled.span`
   width: 30px;
   height: 30px;
-  color: ${({ theme, isOpen }) =>
-    isOpen ? theme.colors.primary : theme.colors.textColor};
-  transform: rotate(${({ isOpen }) => (isOpen ? "180deg" : 0)});
+  color: ${({ theme, isOpen }) => (isOpen ? theme.colors.primary : theme.colors.textColor)};
+  transform: rotate(${({ isOpen }) => (isOpen ? '180deg' : 0)});
   transition: transform ${({ theme }) => theme.animation.cubicBezier},
     color ${({ theme }) => theme.animation.cubicBezier};
 `;

@@ -1,15 +1,16 @@
-import { BsEyeFill, BsCodeSlash } from "react-icons/bs";
-import { MdGroups2, MdPerson2 } from "react-icons/md";
+import { BsEyeFill, BsCodeSlash } from 'react-icons/bs';
+import { MdGroups2, MdPerson2 } from 'react-icons/md';
 import {
   ListItem,
-  ListItemWrapper,
+  ListItemHeader,
   ListItemContent,
   ListItemTitle,
   ListItemDescription,
+  ListItemStack,
   Links,
   Link,
-  Image,
-} from "./ProjectsItem.styled";
+  Image
+} from './ProjectsItem.styled';
 
 export default function ProjectsItem({
   name,
@@ -18,25 +19,27 @@ export default function ProjectsItem({
   codeLink,
   img,
   isPersonal,
+  description
 }) {
   return (
     <ListItem>
-      <ListItemWrapper>
-        <Image src={img} alt={name} />
-        <ListItemContent>
-          {isPersonal ? <MdPerson2 size={40} /> : <MdGroups2 size={40} />}
+      <Image src={img} alt={name} />
+      <ListItemContent>
+        <ListItemHeader>
           <ListItemTitle>{name}</ListItemTitle>
-          <ListItemDescription>{stack}</ListItemDescription>
-          <Links>
-            <Link href={pageLink} target="_blank">
-              <BsEyeFill size={20} />
-            </Link>
-            <Link href={codeLink} target="_blank">
-              <BsCodeSlash size={20} />
-            </Link>
-          </Links>
-        </ListItemContent>
-      </ListItemWrapper>
+          {isPersonal ? <MdPerson2 size={40} /> : <MdGroups2 size={40} />}
+        </ListItemHeader>
+        <ListItemStack>{stack.join(' - ')}</ListItemStack>
+        <ListItemDescription>{description}</ListItemDescription>
+        <Links>
+          <Link href={pageLink} target="_blank">
+            <BsEyeFill size={20} />
+          </Link>
+          <Link href={codeLink} target="_blank">
+            <BsCodeSlash size={20} />
+          </Link>
+        </Links>
+      </ListItemContent>
     </ListItem>
   );
 }

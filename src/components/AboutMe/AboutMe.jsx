@@ -6,7 +6,9 @@ import { qa } from '~/data/qa';
 import avatar from '~/assets/avatar.jpg';
 import {
   Content,
+  Description,
   Avatar,
+  Contact,
   Accordion,
   AccordionItem,
   AccordionHeader,
@@ -14,6 +16,9 @@ import {
   AccordionIcon,
   AccordionContent
 } from './AboutMe.styled';
+
+import { IoLocation } from 'react-icons/io5';
+import { IoIosCall } from 'react-icons/io';
 
 export default function AboutMe() {
   const [selected, setSelected] = useState(0);
@@ -31,9 +36,19 @@ export default function AboutMe() {
       <Container>
         <Title>About</Title>
         <Content>
-          <Avatar>
-            <img src={avatar} alt="avatar" width={600} />
-          </Avatar>
+          <Description>
+            <Avatar>
+              <img src={avatar} alt="avatar" width={600} />
+            </Avatar>
+            <Contact>
+              <IoLocation size={20} />
+              Voznesensk (ready to relocate)
+            </Contact>
+            <Contact>
+              <IoIosCall size={20} />
+              +38 099 064 84 14
+            </Contact>
+          </Description>
           <Accordion>
             {qa.map((item, idx) => (
               <AccordionItem key={item.question}>
