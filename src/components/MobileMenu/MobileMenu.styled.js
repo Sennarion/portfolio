@@ -30,7 +30,7 @@ export const LinksList = styled.ul`
 
 export const LinksItem = styled.li``;
 
-export const StyledLink = styled(Link)`
+export const NavLink = styled(Link)`
   display: block;
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.fontSizes.medium};

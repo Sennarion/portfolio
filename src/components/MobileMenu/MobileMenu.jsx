@@ -1,7 +1,8 @@
 import { BsDownload } from 'react-icons/bs';
 import { Container, Button, Social } from '~/components';
-import { Menu, Content, LinksList, LinksItem, StyledLink } from './MobileMenu.styled';
+import { Menu, Content, LinksList, LinksItem, NavLink } from './MobileMenu.styled';
 import cv from '~/assets/Reznichenko_Serhii.pdf';
+import { nav } from '~/data/nav';
 
 export default function MobileMenu({ toggleMenu, isOpen }) {
   return (
@@ -9,50 +10,19 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
       <Container>
         <Content>
           <LinksList>
-            <LinksItem>
-              <StyledLink
-                to="hero"
-                smooth={true}
-                offset={-40}
-                duration={500}
-                delay={200}
-                onClick={toggleMenu}>
-                Home
-              </StyledLink>
-            </LinksItem>
-            <LinksItem>
-              <StyledLink
-                to="aboutme"
-                smooth={true}
-                offset={-40}
-                duration={500}
-                delay={200}
-                onClick={toggleMenu}>
-                About me
-              </StyledLink>
-            </LinksItem>
-            <LinksItem>
-              <StyledLink
-                to="skills"
-                smooth={true}
-                offset={-40}
-                duration={500}
-                delay={200}
-                onClick={toggleMenu}>
-                Skills
-              </StyledLink>
-            </LinksItem>
-            <LinksItem>
-              <StyledLink
-                to="projects"
-                smooth={true}
-                offset={-40}
-                duration={500}
-                delay={200}
-                onClick={toggleMenu}>
-                Projects
-              </StyledLink>
-            </LinksItem>
+            {nav.map(({ section, path }) => (
+              <LinksItem>
+                <NavLink
+                  to={path}
+                  smooth={true}
+                  offset={-40}
+                  duration={500}
+                  delay={200}
+                  onClick={toggleMenu}>
+                  {section}
+                </NavLink>
+              </LinksItem>
+            ))}
           </LinksList>
           <Button as="a" href={cv} download="Serhii_Reznichenko_CV">
             <BsDownload />

@@ -1,10 +1,8 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyleComponent = createGlobalStyle`
-
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 body {

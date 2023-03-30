@@ -4,7 +4,6 @@ export { default as ProjectsItem } from './ProjectsItem/ProjectsItem';
 export { default as Header } from './Header/Header';
 export { default as Footer } from './Footer/Footer';
 export { default as SkillsList } from './SkillsList/SkillsList';
-export { default as Scrollbar } from './Scrollbar/Scrollbar';
 export { default as Hero } from './Hero/Hero';
 export { default as Nav } from './Nav/Nav';
 export { default as MobileMenu } from './MobileMenu/MobileMenu';
