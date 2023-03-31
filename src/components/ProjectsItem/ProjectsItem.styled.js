@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const ListItem = styled.li`
   flex-basis: 100%;
   display: flex;
-  /* gap: ${({ theme }) => theme.spacing(10)}; */
-  /* border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(5)}; */
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.grey};
   border: 2px solid ${({ theme }) => theme.colors.grey};
@@ -45,7 +43,7 @@ export const ListItemDescription = styled.p`
 
 export const Links = styled.div`
   display: flex;
-  gap: ${({ theme }) => theme.spacing(1)};
+  gap: ${({ theme }) => theme.spacing(2)};
 `;
 
 export const Link = styled.a`
@@ -55,8 +53,8 @@ export const Link = styled.a`
   align-items: center;
   width: 44px;
   height: 44px;
-  background-color: ${({ theme }) => theme.colors.white};
-  transition: background-color ${({ theme }) => theme.animation.cubicBezier};
+  background-color: ${({ theme }) => theme.colors.primary};
+  transition: box-shadow ${({ theme }) => theme.animation.cubicBezier};
   border-radius: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(1)};
 
   svg {
@@ -65,15 +63,10 @@ export const Link = styled.a`
 
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => theme.colors.primary};
-
-    svg {
-      fill: ${({ theme }) => theme.colors.secondary};
-    }
+    box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
   }
 `;
 
 export const Image = styled.img`
   width: 30%;
-  /* border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(5)}; */
 `;

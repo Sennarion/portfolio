@@ -14,6 +14,8 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
               <LinksItem key={path}>
                 <NavLink
                   to={path}
+                  activeClass="active"
+                  spy={true}
                   smooth={true}
                   offset={-40}
                   duration={500}

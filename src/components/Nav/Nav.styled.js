@@ -23,6 +23,7 @@ export const NavList = styled.ul`
 export const NavItem = styled.li``;
 
 export const NavLink = styled(Link)`
+  display: block;
   text-transform: uppercase;
   padding: ${({ theme }) => theme.spacing(2)};
   transition: color ${({ theme }) => theme.animation.cubicBezier},
@@ -36,6 +37,6 @@ export const NavLink = styled(Link)`
   }
 
   &.active {
-    color: #111;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;

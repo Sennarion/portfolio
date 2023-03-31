@@ -36,4 +36,8 @@ export const NavLink = styled(Link)`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   padding: ${({ theme }) => theme.spacing(4)} 0;
   text-align: center;
+
+  &.active {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;

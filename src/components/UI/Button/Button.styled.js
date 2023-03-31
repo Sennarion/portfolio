@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Btn = styled.button`
   display: inline-flex;
@@ -8,8 +8,7 @@ export const Btn = styled.button`
   padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(8)};
   background: none;
   border: 2px solid ${({ theme }) => theme.colors.primary};
-  border-radius: ${({ theme }) => theme.spacing(3)}
-    ${({ theme }) => theme.spacing(1)};
+  border-radius: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(1)};
   text-transform: uppercase;
   line-height: ${({ theme }) => theme.lineHeight.default};
   color: ${({ theme }) => theme.colors.primary};
@@ -26,8 +25,6 @@ export const Btn = styled.button`
   &:hover,
   &:focus {
     text-shadow: ${({ theme }) => theme.shadows.primaryShadow};
-    -webkit-box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
-    -moz-box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
     box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
 
     svg {
