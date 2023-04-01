@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const StyledHeader = styled.header`
   position: fixed;
@@ -18,7 +19,7 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
 `;
 
-export const Logo = styled.span`
+export const Logo = styled(Link)`
   width: 44px;
   height: 44px;
   display: flex;

@@ -1,56 +1,89 @@
-import { useState } from "react";
-import { Collapse } from "react-collapse";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { Container, Title } from "~/components";
-import { qa } from "~/data/qa";
-import avatar from "~/assets/avatar.jpg";
+import { useState } from 'react';
+import { Section, Container, Title, Accordion, Education, Experience } from '~/components';
+import avatar from '~/assets/avatar.jpg';
 import {
   Content,
+  Description,
   Avatar,
-  Accordion,
-  AccordionItem,
-  AccordionHeader,
-  AccordionTitle,
-  AccordionIcon,
-  AccordionContent,
-} from "./AboutMe.styled";
+  Contact,
+  ContactLink,
+  Tabs,
+  TabsControllers,
+  TabButton,
+  TabsContent
+} from './AboutMe.styled';
+import { FaLinkedin, FaGithub, FaTelegram } from 'react-icons/fa';
+import { IoLocation, IoMail } from 'react-icons/io5';
+import { IoIosCall } from 'react-icons/io';
 
 export default function AboutMe() {
   const [selected, setSelected] = useState(0);
 
-  const toggle = (idx) => {
-    if (selected === idx) {
-      return setSelected(null);
-    }
-
-    setSelected(idx);
-  };
-
   return (
-    <Container>
-      <Title>About me</Title>
-      <Content>
-        <Avatar>
-          <img src={avatar} alt="avatar" width={600} />
-        </Avatar>
-        <Accordion>
-          {qa.map((item, idx) => (
-            <AccordionItem key={item.question}>
-              <AccordionHeader onClick={() => toggle(idx)}>
-                <AccordionTitle isOpened={selected === idx}>
-                  {item.question}
-                </AccordionTitle>
-                <AccordionIcon isOpen={selected === idx}>
-                  <MdOutlineKeyboardArrowDown size={30} />
-                </AccordionIcon>
-              </AccordionHeader>
-              <Collapse isOpened={selected === idx}>
-                <AccordionContent>{item.answer}</AccordionContent>
-              </Collapse>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Content>
-    </Container>
+    <Section id="about">
+      <Container>
+        <Title>About</Title>
+        <Content>
+          <Description>
+            <Avatar>
+              <img src={avatar} alt="avatar" width={600} />
+            </Avatar>
+            <Contact>
+              <IoLocation size={20} />
+              Voznesensk (ready to relocate)
+            </Contact>
+            <Contact>
+              <IoIosCall size={20} />
+              <ContactLink href="tel:+380990648414">+38 099 064 84 14</ContactLink>
+            </Contact>
+            <Contact>
+              <IoMail size={20} />
+              <ContactLink href="mailto:dev.serhiireznichenko@gmail.com">
+                dev.serhiireznichenko@gmail.com
+              </ContactLink>
+            </Contact>
+            <Contact>
+              <FaTelegram size={20} />
+              <ContactLink href="https://t.me/sennarion" rel="noreferrer" target="_blank">
+                Telegram
+              </ContactLink>
+            </Contact>
+            <Contact>
+              <FaLinkedin size={20} />
+              <ContactLink
+                href="https://www.linkedin.com/in/serhii-reznichenko/"
+                rel="noreferrer"
+                target="_blank">
+                LinkedIn
+              </ContactLink>
+            </Contact>
+            <Contact>
+              <FaGithub size={20} />
+              <ContactLink href="https://github.com/Sennarion" rel="noreferrer" target="_blank">
+                GitHub
+              </ContactLink>
+            </Contact>
+          </Description>
+          <Tabs>
+            <TabsControllers>
+              <TabButton onClick={() => setSelected(0)} isActive={selected === 0}>
+                Q&A
+              </TabButton>
+              <TabButton onClick={() => setSelected(1)} isActive={selected === 1}>
+                Education
+              </TabButton>
+              <TabButton onClick={() => setSelected(2)} isActive={selected === 2}>
+                Work Experience
+              </TabButton>
+            </TabsControllers>
+            <TabsContent>
+              {selected === 0 && <Accordion />}
+              {selected === 1 && <Education />}
+              {selected === 2 && <Experience />}
+            </TabsContent>
+          </Tabs>
+        </Content>
+      </Container>
+    </Section>
   );
 }

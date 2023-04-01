@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const NavWrapper = styled.nav`
   display: none;
@@ -19,7 +20,10 @@ export const NavList = styled.ul`
   }
 `;
 
-export const NavItem = styled.li`
+export const NavItem = styled.li``;
+
+export const NavLink = styled(Link)`
+  display: block;
   text-transform: uppercase;
   padding: ${({ theme }) => theme.spacing(2)};
   transition: color ${({ theme }) => theme.animation.cubicBezier},
@@ -30,5 +34,9 @@ export const NavItem = styled.li`
   &:focus {
     color: ${({ theme }) => theme.colors.primary};
     text-shadow: ${({ theme }) => theme.shadows.primaryShadow};
+  }
+
+  &.active {
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
