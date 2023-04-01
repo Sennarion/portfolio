@@ -20,6 +20,7 @@ export const SkillName = styled.h3`
   justify-content: center;
   align-items: center;
   gap: ${({ theme }) => theme.spacing(4)};
+  padding: ${({ theme }) => theme.spacing(4)};
   text-align: center;
   color: ${({ theme }) => theme.colors.grey};
   width: 30%;

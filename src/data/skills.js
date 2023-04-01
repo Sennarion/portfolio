@@ -7,8 +7,10 @@ import {
   SiMui
 } from 'react-icons/si';
 import { BsGit } from 'react-icons/bs';
-import { DiCss3, DiReact } from 'react-icons/di';
+import { DiCss3 } from 'react-icons/di';
 import { AiFillHtml5 } from 'react-icons/ai';
+import { IoLibrary, IoLogoReact } from 'react-icons/io5';
+import { GoTools } from 'react-icons/go';
 
 export const skills = [
   {
@@ -57,7 +59,7 @@ export const skills = [
   },
   {
     title: 'React',
-    icon: DiReact,
+    icon: IoLogoReact,
     abilities: [
       'class/function components',
       'state and events',
@@ -116,6 +118,30 @@ export const skills = [
       'components and graphic elements',
       'layer organization and styles',
       'formats and resolutions'
+    ]
+  },
+  {
+    title: 'Some Libraries',
+    icon: IoLibrary,
+    abilities: [
+      'axios',
+      'formik, yup',
+      'toastify, notiflix',
+      'emotion, bootstrap',
+      'react-transition-group, framer-motion',
+      'lodash, handlebars',
+      'persist, date-fns'
+    ]
+  },
+  {
+    title: 'Other Tools',
+    icon: GoTools,
+    abilities: [
+      'visual studio code',
+      'webpack, parcel, gulp, vite',
+      'swagger, postman, firebase',
+      'prettier, eslint',
+      'netlify, gh-pages'
     ]
   }
 ];
