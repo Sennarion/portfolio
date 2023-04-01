@@ -61,8 +61,8 @@ export const TabButton = styled.button`
   border: 2px solid ${({ theme }) => theme.colors.grey};
   border-bottom: none;
   font-weight: 700;
-  /* border-top-left-radius: ${({ theme }) => theme.spacing(3)}; */
-  /* border-top-right-radius: ${({ theme }) => theme.spacing(3)}; */
+  border-top-left-radius: ${({ theme }) => theme.spacing(2)};
+  border-top-right-radius: ${({ theme }) => theme.spacing(2)};
   color: ${({ theme, isActive }) => (isActive ? theme.colors.primary : theme.colors.white)};
   cursor: pointer;
   outline: none;
@@ -71,7 +71,7 @@ export const TabButton = styled.button`
 export const TabsContent = styled.div`
   padding: ${({ theme }) => theme.spacing(4)};
   background-color: ${({ theme }) => theme.colors.grey};
-  /* border-radius: ${({ theme }) => theme.spacing(3)}; */
-  /* border-top-left-radius: 0; */
-  /* overflow: hidden; */
+  border-radius: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)};
+  border-top-left-radius: 0;
+  overflow: hidden;
 `;

@@ -1,6 +1,6 @@
 import { List, ListItem, Title, Description, Info, LinkWrapper, Link } from './Education.styled';
 import { education } from '~/data/education';
-import { FaCertificate } from 'react-icons/fa';
+import { TbCertificate } from 'react-icons/tb';
 
 export default function Education() {
   return (
@@ -12,7 +12,7 @@ export default function Education() {
           <Description>{field}</Description>
           {certificate && (
             <LinkWrapper>
-              <FaCertificate size={20} />
+              <TbCertificate size={20} />
               <Link href={certificate} target="_blank">
                 View Certificate
               </Link>

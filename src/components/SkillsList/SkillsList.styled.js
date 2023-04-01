@@ -47,7 +47,8 @@ export const ListItem = styled.li`
   display: flex;
   background: ${({ theme }) => theme.colors.grey};
   border: 2px solid transparent;
-  /* border-radius: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)}; */
+  border-radius: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)};
+  overflow: hidden;
   transition: box-shadow ${({ theme }) => theme.animation.cubicBezier},
     border ${({ theme }) => theme.animation.cubicBezier};
 

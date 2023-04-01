@@ -4,7 +4,7 @@ export const AccordionWrapper = styled.div``;
 
 export const AccordionItem = styled.div`
   &:not(:last-of-type) {
-    border-bottom: 1px dotted ${({ theme }) => theme.colors.white};
+    border-bottom: 2px dotted ${({ theme }) => theme.colors.secondaryGrey};
   }
 `;
 

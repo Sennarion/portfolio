@@ -6,7 +6,7 @@ export const ListItem = styled.li`
   padding: ${({ theme }) => theme.spacing(6)};
 
   &:not(:last-of-type) {
-    border-bottom: 1px dotted ${({ theme }) => theme.colors.white};
+    border-bottom: 2px dotted ${({ theme }) => theme.colors.secondaryGrey};
   }
 `;
 
