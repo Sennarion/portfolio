@@ -4,6 +4,7 @@ import {
   Title,
   Description,
   Info,
+  Achievement,
   ResponsibilitiesList,
   ResponsibilitiesItem
 } from './Experience.styled';
@@ -15,17 +16,17 @@ export default function Experience() {
       {experience.map(({ title, company, period, responsibilities, achievement }) => (
         <ListItem key={company}>
           <Title>{title}</Title>
-          <Info>{company}</Info>
-          <Info>{period}</Info>
+          <Info>
+            {company} ({period})
+          </Info>
           <Description>
-            Responsibilities:
             <ResponsibilitiesList>
               {responsibilities.map((el) => (
                 <ResponsibilitiesItem key={el}>{el}</ResponsibilitiesItem>
               ))}
             </ResponsibilitiesList>
           </Description>
-          <Info>Achievement: {achievement}</Info>
+          <Achievement>Achievement: {achievement}</Achievement>
         </ListItem>
       ))}
     </List>

@@ -12,7 +12,7 @@ export const AccordionHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${({ theme }) => theme.spacing(4)};
+  padding: ${({ theme }) => theme.spacing(6)};
   cursor: pointer;
   background: ${({ theme }) => theme.colors.grey};
 `;
@@ -32,7 +32,7 @@ export const AccordionIcon = styled.span`
 `;
 
 export const AccordionContent = styled.p`
-  padding: ${({ theme }) => theme.spacing(4)};
+  padding: ${({ theme }) => theme.spacing(6)};
   background: ${({ theme }) => theme.colors.grey};
   padding-top: 0;
 `;

@@ -1,9 +1,13 @@
 export const experience = [
   {
     title: 'Graphic Designer',
-    company: 'Self-employment',
+    company: 'Self-employment, Part-time',
     period: 'mar 2022 - till now',
-    responsibilities: ['design development for outdoor advertising', 'design of printed materials'],
+    responsibilities: [
+      'design development for outdoor advertising',
+      'design of printed materials',
+      'have experience in designing web applications*'
+    ],
     achievement: 'designed the largest central billboards in my city'
   },
   {

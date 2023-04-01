@@ -29,6 +29,7 @@ export const Avatar = styled.div`
 
 export const Contact = styled.p`
   display: flex;
+  align-items: center;
   gap: ${({ theme }) => theme.spacing(4)};
   margin-bottom: ${({ theme }) => theme.spacing(4)};
 `;
@@ -55,13 +56,14 @@ export const TabsControllers = styled.div`
 `;
 
 export const TabButton = styled.button`
-  padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(8)};
+  padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(5)};
   background-color: ${({ theme, isActive }) => (isActive ? theme.colors.grey : 'transparent')};
   border: 2px solid ${({ theme }) => theme.colors.grey};
   border-bottom: none;
-  border-top-left-radius: ${({ theme }) => theme.spacing(3)};
-  border-top-right-radius: ${({ theme }) => theme.spacing(3)};
-  color: ${({ theme }) => theme.colors.white};
+  font-weight: 700;
+  /* border-top-left-radius: ${({ theme }) => theme.spacing(3)}; */
+  /* border-top-right-radius: ${({ theme }) => theme.spacing(3)}; */
+  color: ${({ theme, isActive }) => (isActive ? theme.colors.primary : theme.colors.white)};
   cursor: pointer;
   outline: none;
 `;
@@ -69,7 +71,7 @@ export const TabButton = styled.button`
 export const TabsContent = styled.div`
   padding: ${({ theme }) => theme.spacing(4)};
   background-color: ${({ theme }) => theme.colors.grey};
-  border-radius: ${({ theme }) => theme.spacing(3)};
-  border-top-left-radius: 0;
-  overflow: hidden;
+  /* border-radius: ${({ theme }) => theme.spacing(3)}; */
+  /* border-top-left-radius: 0; */
+  /* overflow: hidden; */
 `;
