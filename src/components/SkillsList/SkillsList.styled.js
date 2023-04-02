@@ -92,13 +92,15 @@ export const AbilitiesList = styled.ul`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: ${({ theme }) => theme.spacing(10)};
+  padding: ${({ theme }) => theme.spacing(6)};
   list-style: inside;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     width: 70%;
-    padding-left: ${({ theme }) => theme.spacing(10)};
+    padding: ${({ theme }) => theme.spacing(10)};
   }
 `;
 
-export const AbilitiesItem = styled.li``;
+export const AbilitiesItem = styled.li`
+  line-height: ${({ theme }) => theme.lineHeight.large};
+`;

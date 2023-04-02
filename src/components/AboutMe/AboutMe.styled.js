@@ -5,25 +5,51 @@ export const Content = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(10)};
 
-  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     flex-direction: row;
     align-items: flex-start;
   }
 `;
 
 export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(8)};
+
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     width: 30%;
+    flex-direction: column;
   }
 `;
 
 export const Avatar = styled.div`
+  width: 100%;
   border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(3)};
   overflow: hidden;
-  margin-bottom: ${({ theme }) => theme.spacing(8)};
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 40%;
+  }
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    width: 100%;
     border-radius: ${({ theme }) => theme.spacing(20)} ${({ theme }) => theme.spacing(5)};
+  }
+`;
+
+export const Contacts = styled.div`
+  width: 100%;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    width: 100%;
   }
 `;
 
@@ -45,7 +71,7 @@ export const ContactLink = styled.a`
 `;
 
 export const Tabs = styled.div`
-  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     width: 70%;
   }
 `;

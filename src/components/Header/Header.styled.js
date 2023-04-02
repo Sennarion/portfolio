@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
   top: 0;
   left: 0;
   z-index: 100;
+  background-color: ${({ theme }) => theme.colors.secondaryGrey};
   backdrop-filter: blur(5px);
 `;
 

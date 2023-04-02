@@ -28,7 +28,7 @@ export default function Hero() {
                   ? "Like a tiny hummingbird, I'm flying in search of new challenges and opportunities. I'm always on the move and buzzing with energy and enthusiasm. So if you're looking for a motivated candidate to join your team, I'm ready to spread my wings and take flight towards success."
                   : "If you're looking for an enthusiastic candidate to join your team, I'm ready to work hard and strive towards success."}
               </Subtitle>
-              <Button as={Link} to="projects" smooth={true} offset={-40} duration={500}>
+              <Button as={Link} to="projects" smooth={true} duration={500}>
                 Check out projects
               </Button>
             </div>

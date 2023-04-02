@@ -11,7 +11,6 @@ export const Content = styled.div`
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 80px);
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     flex-direction: row;

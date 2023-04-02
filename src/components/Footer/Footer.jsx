@@ -1,5 +1,5 @@
 import { Container, Social } from '~/components';
-import { StyledFooter, FooterContent } from './Footer.styled';
+import { StyledFooter, FooterContent, Text } from './Footer.styled';
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <Container>
         <FooterContent>
           <Social />
-          <p>© 2023 Created by Serhii Reznichenko</p>
+          <Text>© 2023 Created by Serhii Reznichenko</Text>
         </FooterContent>
       </Container>
     </StyledFooter>

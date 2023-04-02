@@ -3,10 +3,14 @@ import styled from 'styled-components';
 export const List = styled.ul``;
 
 export const ListItem = styled.li`
-  padding: ${({ theme }) => theme.spacing(6)};
+  padding: ${({ theme }) => theme.spacing(2)};
 
   &:not(:last-of-type) {
-    border-bottom: 2px dotted ${({ theme }) => theme.colors.secondaryGrey};
+    border-bottom: 2px dotted ${({ theme }) => theme.colors.secondaryBlue};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    padding: ${({ theme }) => theme.spacing(4)};
   }
 `;
 

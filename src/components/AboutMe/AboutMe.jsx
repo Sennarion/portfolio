@@ -5,6 +5,7 @@ import {
   Content,
   Description,
   Avatar,
+  Contacts,
   Contact,
   ContactLink,
   Tabs,
@@ -28,41 +29,43 @@ export default function AboutMe() {
             <Avatar>
               <img src={avatar} alt="avatar" width={600} />
             </Avatar>
-            <Contact>
-              <IoLocation size={20} />
-              Voznesensk (ready to relocate)
-            </Contact>
-            <Contact>
-              <IoIosCall size={20} />
-              <ContactLink href="tel:+380990648414">+38 099 064 84 14</ContactLink>
-            </Contact>
-            <Contact>
-              <IoMail size={20} />
-              <ContactLink href="mailto:dev.serhiireznichenko@gmail.com">
-                dev.serhiireznichenko@gmail.com
-              </ContactLink>
-            </Contact>
-            <Contact>
-              <BsTelegram size={20} />
-              <ContactLink href="https://t.me/sennarion" rel="noreferrer" target="_blank">
-                Telegram
-              </ContactLink>
-            </Contact>
-            <Contact>
-              <BsLinkedin size={20} />
-              <ContactLink
-                href="https://www.linkedin.com/in/serhii-reznichenko/"
-                rel="noreferrer"
-                target="_blank">
-                LinkedIn
-              </ContactLink>
-            </Contact>
-            <Contact>
-              <BsGithub size={20} />
-              <ContactLink href="https://github.com/Sennarion" rel="noreferrer" target="_blank">
-                GitHub
-              </ContactLink>
-            </Contact>
+            <Contacts>
+              <Contact>
+                <IoLocation size={20} />
+                Voznesensk (ready to relocate)
+              </Contact>
+              <Contact>
+                <IoIosCall size={20} />
+                <ContactLink href="tel:+380990648414">+38 099 064 84 14</ContactLink>
+              </Contact>
+              <Contact>
+                <IoMail size={20} />
+                <ContactLink href="mailto:dev.serhiireznichenko@gmail.com">
+                  dev.serhiireznichenko@gmail.com
+                </ContactLink>
+              </Contact>
+              <Contact>
+                <BsTelegram size={20} />
+                <ContactLink href="https://t.me/sennarion" rel="noreferrer" target="_blank">
+                  Telegram
+                </ContactLink>
+              </Contact>
+              <Contact>
+                <BsLinkedin size={20} />
+                <ContactLink
+                  href="https://www.linkedin.com/in/serhii-reznichenko/"
+                  rel="noreferrer"
+                  target="_blank">
+                  LinkedIn
+                </ContactLink>
+              </Contact>
+              <Contact>
+                <BsGithub size={20} />
+                <ContactLink href="https://github.com/Sennarion" rel="noreferrer" target="_blank">
+                  GitHub
+                </ContactLink>
+              </Contact>
+            </Contacts>
           </Description>
           <Tabs>
             <TabsControllers>

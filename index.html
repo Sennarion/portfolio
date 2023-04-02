@@ -15,46 +15,13 @@
         margin: 0;
         padding: 0;
         height: 100%;
-      }
-
-      .loader-wrapper {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
         background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-        display: grid;
-        place-items: center;
-      }
-
-      .loader {
-        border: 10px solid #e4ff00;
-        border-top: 10px solid #0299f7;
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(360deg);
-        }
       }
     </style>
     <title>Serhii Reznichenko</title>
   </head>
   <body>
-    <div id="root">
-      <div class="loader-wrapper">
-        <div class="loader"></div>
-      </div>
-    </div>
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

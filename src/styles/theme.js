@@ -5,8 +5,9 @@ export const theme = Object.freeze({
     textColor: '#f2f2f2',
     white: '#ffffff',
     blue: '#0299f7',
+    secondaryBlue: '#32455e',
     grey: '#1a2532',
-    secondaryGrey: '#32455e',
+    secondaryGrey: 'rgba(11, 13, 18, 0.7)',
     primaryGradient:
       'linear-gradient(45deg, rgba(71, 85, 234, 1) 0%, rgba(0, 208, 80, 1) 27%, rgba(228, 255, 0, 1) 70%, rgba(228, 255, 0, 1) 100%)',
     secondaryGradient:
@@ -32,7 +33,8 @@ export const theme = Object.freeze({
   lineHeight: {
     default: 1,
     small: 1.2,
-    regular: 1.6
+    regular: 1.6,
+    large: 2.0
   },
   spacing: (value) => `${4 * value}px`,
   animation: {

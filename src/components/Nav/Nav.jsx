@@ -10,13 +10,7 @@ export default function Nav() {
       <NavList>
         {nav.map(({ section, path }) => (
           <NavItem key={path}>
-            <NavLink
-              to={path}
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-40}
-              duration={500}>
+            <NavLink to={path} activeClass="active" spy={true} smooth={true} duration={500}>
               {section}
             </NavLink>
           </NavItem>

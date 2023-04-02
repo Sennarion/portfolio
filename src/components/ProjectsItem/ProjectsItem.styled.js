@@ -25,10 +25,11 @@ export const ListItem = styled.li`
 
 export const ListItemContent = styled.div`
   width: 100%;
-  padding: ${({ theme }) => theme.spacing(10)};
+  padding: ${({ theme }) => theme.spacing(6)};
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     width: 60%;
+    padding: ${({ theme }) => theme.spacing(10)};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
@@ -36,14 +37,11 @@ export const ListItemContent = styled.div`
   }
 `;
 
-export const ListItemHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const ListItemTitle = styled.h3`
-  margin: ${({ theme }) => theme.spacing(2)} 0;
+  display: flex;
+  align-items: flex-end;
+  gap: ${({ theme }) => theme.spacing(4)};
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
   color: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -85,6 +83,7 @@ export const Link = styled.a`
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   width: 100%;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {

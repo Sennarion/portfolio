@@ -75,8 +75,8 @@ export const skills = [
     abilities: [
       'toolkit, store and slices',
       'actions, reducers, selectors',
-      'asynchronous operations (thunk)',
-      'devTools and debugging'
+      'asynchronous operations',
+      'devtools and debugging'
     ]
   },
   {
@@ -86,7 +86,6 @@ export const skills = [
       'global styles',
       'props and dynamic styles',
       'theming and keyframes',
-      'nested selectors',
       'reusable components'
     ]
   },
@@ -108,7 +107,7 @@ export const skills = [
       'manage repositories',
       'branching and merging',
       'committing and pushing',
-      'feature branches and pull requests'
+      'pull requests and conflicts resolving'
     ]
   },
   {
