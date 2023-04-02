@@ -1,20 +1,17 @@
-import { FaLinkedin, FaGithub, FaTelegram } from "react-icons/fa";
-import { Icons, Link } from "./Social.styled";
+import { Icons, Link } from './Social.styled';
+import { BsGithub, BsTelegram, BsLinkedin } from 'react-icons/bs';
 
 export default function Social() {
   return (
     <Icons>
-      <Link
-        href="https://www.linkedin.com/in/serhii-reznichenko/"
-        target="_blank"
-      >
-        <FaLinkedin size={30} />
+      <Link href="https://www.linkedin.com/in/serhii-reznichenko/" target="_blank">
+        <BsLinkedin size={30} />
       </Link>
       <Link href="https://github.com/Sennarion" target="_blank">
-        <FaGithub size={30} />
+        <BsGithub size={30} />
       </Link>
       <Link href="https://t.me/sennarion" target="_blank">
-        <FaTelegram size={30} />
+        <BsTelegram size={30} />
       </Link>
     </Icons>
   );

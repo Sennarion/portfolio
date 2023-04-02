@@ -23,10 +23,7 @@ export const Content = styled.div`
   gap: ${({ theme }) => theme.spacing(10)};
 `;
 
-export const LinksList = styled.ul`
-  display: flex;
-  flex-direction: column;
-`;
+export const LinksList = styled.ul``;
 
 export const LinksItem = styled.li``;
 

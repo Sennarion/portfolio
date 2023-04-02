@@ -10,6 +10,8 @@ body {
   font-size: ${({ theme }) => theme.fontSizes.small};
   color: ${({ theme }) => theme.colors.textColor};
   line-height: ${({ theme }) => theme.lineHeight.regular};
+  background: ${({ theme }) => theme.colors.bgGradient};
+  background-attachment: fixed;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
     font-size: ${({ theme }) => theme.fontSizes.medium};

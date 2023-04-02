@@ -17,7 +17,6 @@ export default function MobileMenu({ toggleMenu, isOpen }) {
                   activeClass="active"
                   spy={true}
                   smooth={true}
-                  offset={-40}
                   duration={500}
                   delay={200}
                   onClick={toggleMenu}>

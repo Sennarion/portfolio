@@ -4,7 +4,7 @@ export const AccordionWrapper = styled.div``;
 
 export const AccordionItem = styled.div`
   &:not(:last-of-type) {
-    border-bottom: 1px dotted ${({ theme }) => theme.colors.white};
+    border-bottom: 2px dotted ${({ theme }) => theme.colors.secondaryBlue};
   }
 `;
 
@@ -12,9 +12,13 @@ export const AccordionHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${({ theme }) => theme.spacing(6)};
+  padding: ${({ theme }) => theme.spacing(2)};
   cursor: pointer;
   background: ${({ theme }) => theme.colors.grey};
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    padding: ${({ theme }) => theme.spacing(4)};
+  }
 `;
 
 export const AccordionTitle = styled.h3`
@@ -32,7 +36,11 @@ export const AccordionIcon = styled.span`
 `;
 
 export const AccordionContent = styled.p`
-  padding: ${({ theme }) => theme.spacing(6)};
+  padding: ${({ theme }) => theme.spacing(2)};
   background: ${({ theme }) => theme.colors.grey};
   padding-top: 0;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    padding: ${({ theme }) => theme.spacing(4)};
+  }
 `;
