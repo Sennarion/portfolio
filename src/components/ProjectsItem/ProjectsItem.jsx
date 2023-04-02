@@ -9,6 +9,7 @@ import {
   ListItemStack,
   Links,
   Link,
+  ImageWrapper,
   Image
 } from './ProjectsItem.styled';
 
@@ -23,7 +24,9 @@ export default function ProjectsItem({
 }) {
   return (
     <ListItem>
-      <Image src={img} alt={name} />
+      <ImageWrapper>
+        <Image src={img} alt={name} />
+      </ImageWrapper>
       <ListItemContent>
         <ListItemHeader>
           <ListItemTitle>{name}</ListItemTitle>

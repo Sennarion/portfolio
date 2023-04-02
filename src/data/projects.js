@@ -79,6 +79,6 @@ export const projects = [
     img: project6,
     isPersonal: true,
     description:
-      'This is a simple website that I created to learn HTML and CSS. The site is adaptive for three types of devices: phone, tablet, and desktop.'
+      'This is a simple website that I created to learn HTML and CSS. The site is adaptive for three types of devices: phone, tablet, and desktop. All images are responsive. The crop technique is used for downloading various images for every screen. All icons are collected in an SVG sprite.'
   }
 ];

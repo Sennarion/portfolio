@@ -16,21 +16,10 @@ export const Icons = styled.div`
       animation: none;
     }
   }
-
-  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-    flex-direction: column;
-    align-items: center;
-    gap: ${({ theme }) => theme.spacing(2)};
-
-    position: fixed;
-    right: 30px;
-    bottom: 40px;
-  }
 `;
 
 export const Link = styled.a`
   display: block;
-
   padding: ${({ theme }) => theme.spacing(2)};
   cursor: pointer;
   transition: transform ${({ theme }) => theme.animation.cubicBezier};

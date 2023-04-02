@@ -56,7 +56,7 @@ export const TabsControllers = styled.div`
 `;
 
 export const TabButton = styled.button`
-  padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(5)};
+  padding: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)};
   background-color: ${({ theme, isActive }) => (isActive ? theme.colors.grey : 'transparent')};
   border: 2px solid ${({ theme }) => theme.colors.grey};
   border-bottom: none;
@@ -66,6 +66,10 @@ export const TabButton = styled.button`
   color: ${({ theme, isActive }) => (isActive ? theme.colors.primary : theme.colors.white)};
   cursor: pointer;
   outline: none;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(5)};
+  }
 `;
 
 export const TabsContent = styled.div`

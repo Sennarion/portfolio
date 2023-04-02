@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ListItem = styled.li`
   flex-basis: 100%;
   display: flex;
+  flex-direction: column;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.grey};
   border: 2px solid ${({ theme }) => theme.colors.grey};
@@ -16,11 +17,23 @@ export const ListItem = styled.li`
     box-shadow: ${({ theme }) => theme.shadows.primaryShadow};
     border: 2px solid ${({ theme }) => theme.colors.primary};
   }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    flex-direction: row;
+  }
 `;
 
 export const ListItemContent = styled.div`
   width: 100%;
   padding: ${({ theme }) => theme.spacing(10)};
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    width: 70%;
+  }
 `;
 
 export const ListItemHeader = styled.div`
@@ -71,6 +84,19 @@ export const Link = styled.a`
   }
 `;
 
+export const ImageWrapper = styled.div`
+  width: 100%;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 40%;
+    height: 100%;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
+    width: 30%;
+  }
+`;
+
 export const Image = styled.img`
-  width: 30%;
+  object-fit: contain;
 `;

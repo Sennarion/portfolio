@@ -12,9 +12,9 @@ import {
   TabButton,
   TabsContent
 } from './AboutMe.styled';
-import { FaLinkedin, FaGithub, FaTelegram } from 'react-icons/fa';
 import { IoLocation, IoMail } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
+import { BsGithub, BsTelegram, BsLinkedin } from 'react-icons/bs';
 
 export default function AboutMe() {
   const [selected, setSelected] = useState(0);
@@ -43,13 +43,13 @@ export default function AboutMe() {
               </ContactLink>
             </Contact>
             <Contact>
-              <FaTelegram size={20} />
+              <BsTelegram size={20} />
               <ContactLink href="https://t.me/sennarion" rel="noreferrer" target="_blank">
                 Telegram
               </ContactLink>
             </Contact>
             <Contact>
-              <FaLinkedin size={20} />
+              <BsLinkedin size={20} />
               <ContactLink
                 href="https://www.linkedin.com/in/serhii-reznichenko/"
                 rel="noreferrer"
@@ -58,7 +58,7 @@ export default function AboutMe() {
               </ContactLink>
             </Contact>
             <Contact>
-              <FaGithub size={20} />
+              <BsGithub size={20} />
               <ContactLink href="https://github.com/Sennarion" rel="noreferrer" target="_blank">
                 GitHub
               </ContactLink>

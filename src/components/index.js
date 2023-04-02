@@ -16,5 +16,4 @@ export { default as Social } from './Social/Social';
 
 export { Container } from './UI/Container/Container.styled';
 export { Title } from './UI/Title/Title.styled';
-export { Main } from './UI/Main/Main.styled';
 export { Section } from './UI/Section/Section.styled';

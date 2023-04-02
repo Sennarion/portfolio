@@ -1,17 +1,7 @@
 import { useState, useEffect } from 'react';
 import useMediaQuery from '~/hooks/useMediaQuery';
 import { theme } from '~/styles/theme';
-import {
-  Hero,
-  Header,
-  Footer,
-  AboutMe,
-  ProjectsList,
-  SkillsList,
-  Social,
-  Main,
-  MobileMenu
-} from '~/components';
+import { Hero, Header, Footer, AboutMe, ProjectsList, SkillsList, MobileMenu } from '~/components';
 import { GlobalStyleComponent } from '~/styles/GlobalStyles.styled';
 
 export default function App() {
@@ -40,14 +30,13 @@ export default function App() {
   return (
     <>
       <Header toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
-      <Main>
+      <main>
         <Hero />
         <AboutMe />
         <SkillsList />
         <ProjectsList />
         <MobileMenu toggleMenu={toggleMenu} isOpen={isMenuOpen} />
-        {/* {isTablet && <Social />} */}
-      </Main>
+      </main>
       <Footer />
       <GlobalStyleComponent />
     </>

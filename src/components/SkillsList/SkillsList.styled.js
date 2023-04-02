@@ -23,21 +23,33 @@ export const SkillName = styled.h3`
   padding: ${({ theme }) => theme.spacing(4)};
   text-align: center;
   color: ${({ theme }) => theme.colors.grey};
-  width: 30%;
-  height: 100%;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   transition: background-color ${({ theme }) => theme.animation.cubicBezier};
 
   &::after {
     content: '';
     position: absolute;
-    top: 50%;
-    margin-top: -10px;
-    right: -20px;
+    right: 50%;
+    margin-right: -10px;
+    bottom: -20px;
     border: solid 10px transparent;
     border-left-color: ${({ theme }) => theme.colors.white};
+    transform: rotate(90deg);
     z-index: 1;
     transition: border-color ${({ theme }) => theme.animation.cubicBezier};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 30%;
+    height: 100%;
+
+    &::after {
+      bottom: 50%;
+      margin-bottom: -10px;
+      right: -10px;
+      transform: rotate(0deg);
+    }
   }
 `;
 
@@ -45,6 +57,7 @@ export const ListItem = styled.li`
   flex-basis: 100%;
   min-height: 240px;
   display: flex;
+  flex-direction: column;
   background: ${({ theme }) => theme.colors.grey};
   border: 2px solid transparent;
   border-radius: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)};
@@ -65,6 +78,10 @@ export const ListItem = styled.li`
     }
   }
 
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    flex-direction: row;
+  }
+
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     flex-basis: calc((100% - 20px) / 2);
   }
@@ -74,10 +91,14 @@ export const AbilitiesList = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70%;
-  padding: ${({ theme }) => theme.spacing(6)};
-  padding-left: ${({ theme }) => theme.spacing(10)};
+  width: 100%;
+  padding: ${({ theme }) => theme.spacing(10)};
   list-style: inside;
+
+  @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
+    width: 70%;
+    padding-left: ${({ theme }) => theme.spacing(10)};
+  }
 `;
 
 export const AbilitiesItem = styled.li``;
