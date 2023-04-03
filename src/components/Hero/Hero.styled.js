@@ -36,27 +36,17 @@ export const RightSide = styled.div`
   &::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: ${({ theme }) => theme.spacing(40)};
-    height: ${({ theme }) => theme.spacing(40)};
-    border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(5)};
+    top: 30%;
+    left: 30%;
+    width: ${({ theme }) => theme.spacing(60)};
+    height: ${({ theme }) => theme.spacing(60)};
+    border-radius: ${({ theme }) => theme.radius(6)};
+    transform: translate(0, 0);
     background: ${({ theme }) => theme.colors.primaryGradient};
-
-    @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-      width: ${({ theme }) => theme.spacing(60)};
-      height: ${({ theme }) => theme.spacing(60)};
-      border-radius: ${({ theme }) => theme.spacing(14)} ${({ theme }) => theme.spacing(7)};
-      top: 30%;
-      left: 30%;
-      transform: translate(0, 0);
-    }
 
     @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
       width: ${({ theme }) => theme.spacing(80)};
       height: ${({ theme }) => theme.spacing(80)};
-      border-radius: ${({ theme }) => theme.spacing(20)} ${({ theme }) => theme.spacing(10)};
     }
   }
 

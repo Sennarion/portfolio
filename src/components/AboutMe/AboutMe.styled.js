@@ -28,7 +28,7 @@ export const Description = styled.div`
 
 export const Avatar = styled.div`
   width: 100%;
-  border-radius: ${({ theme }) => theme.spacing(10)} ${({ theme }) => theme.spacing(3)};
+  border-radius: ${({ theme }) => theme.radius(6)};
   overflow: hidden;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
@@ -37,7 +37,6 @@ export const Avatar = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.media.desktop}) {
     width: 100%;
-    border-radius: ${({ theme }) => theme.spacing(20)} ${({ theme }) => theme.spacing(5)};
   }
 `;
 
@@ -57,7 +56,10 @@ export const Contact = styled.p`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing(4)};
-  margin-bottom: ${({ theme }) => theme.spacing(4)};
+
+  &:not(:last-of-type) {
+    margin-bottom: ${({ theme }) => theme.spacing(4)};
+  }
 `;
 
 export const ContactLink = styled.a`
@@ -86,7 +88,7 @@ export const TabButton = styled.button`
   background-color: ${({ theme, isActive }) => (isActive ? theme.colors.grey : 'transparent')};
   border: 2px solid ${({ theme }) => theme.colors.grey};
   border-bottom: none;
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   border-top-left-radius: ${({ theme }) => theme.spacing(2)};
   border-top-right-radius: ${({ theme }) => theme.spacing(2)};
   color: ${({ theme, isActive }) => (isActive ? theme.colors.primary : theme.colors.white)};
@@ -94,14 +96,14 @@ export const TabButton = styled.button`
   outline: none;
 
   @media screen and (min-width: ${({ theme }) => theme.media.tablet}) {
-    padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(5)};
+    padding: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(8)};
   }
 `;
 
 export const TabsContent = styled.div`
   padding: ${({ theme }) => theme.spacing(4)};
   background-color: ${({ theme }) => theme.colors.grey};
-  border-radius: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)};
+  border-radius: ${({ theme }) => theme.radius(2)};
   border-top-left-radius: 0;
   overflow: hidden;
 `;

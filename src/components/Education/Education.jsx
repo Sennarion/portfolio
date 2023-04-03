@@ -1,4 +1,13 @@
-import { List, ListItem, Title, Description, Info, LinkWrapper, Link } from './Education.styled';
+import {
+  List,
+  ListItem,
+  LeftSide,
+  RightSide,
+  Title,
+  Description,
+  Info,
+  Link
+} from './Education.styled';
 import { education } from '~/data/education';
 import { TbCertificate } from 'react-icons/tb';
 
@@ -7,16 +16,18 @@ export default function Education() {
     <List>
       {education.map(({ title, period, field, certificate }) => (
         <ListItem key={field}>
-          <Title>{title}</Title>
-          <Info>{period}</Info>
-          <Description>{field}</Description>
+          <LeftSide>
+            <Title>{title}</Title>
+            <Info>{period}</Info>
+            <Description>{field}</Description>
+          </LeftSide>
           {certificate && (
-            <LinkWrapper>
-              <TbCertificate size={20} />
+            <RightSide>
+              <TbCertificate size={40} />
               <Link href={certificate} target="_blank">
-                View Certificate
+                Certificate
               </Link>
-            </LinkWrapper>
+            </RightSide>
           )}
         </ListItem>
       ))}

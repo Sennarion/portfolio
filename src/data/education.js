@@ -8,13 +8,13 @@ export const education = [
   {
     title: 'Hillel IT School',
     period: '2021',
-    field: 'Front End Pro',
+    field: 'Front End Pro Course',
     certificate: 'https://certificate.ithillel.ua/view/77192137'
   },
   {
     title: 'Hillel IT School',
     period: '2021',
-    field: 'Front End Basic',
+    field: 'Front End Basic Course',
     certificate: 'https://certificate.ithillel.ua/view/98313942'
   },
   {

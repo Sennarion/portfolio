@@ -1,12 +1,5 @@
-import { Section, Container, Title } from '~/components';
-import {
-  Content,
-  List,
-  ListItem,
-  SkillName,
-  AbilitiesList,
-  AbilitiesItem
-} from './SkillsList.styled';
+import { Section, Container, Title, SkillsItem } from '~/components';
+import { Content, List } from './SkillsList.styled';
 import { skills } from '~/data/skills';
 
 export default function SkillsList() {
@@ -16,18 +9,8 @@ export default function SkillsList() {
         <Title>My skills</Title>
         <Content>
           <List>
-            {skills.map(({ title, icon: Icon, abilities }) => (
-              <ListItem key={title}>
-                <SkillName>
-                  <Icon size={40} />
-                  {title}
-                </SkillName>
-                <AbilitiesList>
-                  {abilities.map((ability) => (
-                    <AbilitiesItem key={ability}>{ability}</AbilitiesItem>
-                  ))}
-                </AbilitiesList>
-              </ListItem>
+            {skills.map(({ title, icon, abilities }) => (
+              <SkillsItem key={title} title={title} icon={icon} abilities={abilities}></SkillsItem>
             ))}
           </List>
         </Content>

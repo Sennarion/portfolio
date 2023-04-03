@@ -138,7 +138,7 @@ export const skills = [
     abilities: [
       'visual studio code',
       'webpack, parcel, gulp, vite',
-      'swagger, postman, firebase',
+      'firebase, swagger, postman',
       'prettier, eslint',
       'netlify, gh-pages'
     ]

@@ -26,7 +26,7 @@ export const Logo = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(1)};
+  border-radius: ${({ theme }) => theme.radius(1)};
   background-color: ${({ theme }) => theme.colors.primary};
   font-family: ${({ theme }) => theme.fonts.secondary};
   color: ${({ theme }) => theme.colors.secondary};

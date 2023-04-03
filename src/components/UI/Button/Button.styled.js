@@ -8,7 +8,7 @@ export const Btn = styled.button`
   padding: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(8)};
   background: none;
   border: 2px solid ${({ theme }) => theme.colors.primary};
-  border-radius: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(1)};
+  border-radius: ${({ theme }) => theme.radius(1)};
   text-transform: uppercase;
   line-height: ${({ theme }) => theme.lineHeight.default};
   color: ${({ theme }) => theme.colors.primary};

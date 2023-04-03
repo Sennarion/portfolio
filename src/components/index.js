@@ -7,6 +7,7 @@ export { default as Experience } from './Experience/Experience';
 export { default as Accordion } from './Accordion/Accordion';
 export { default as Footer } from './Footer/Footer';
 export { default as SkillsList } from './SkillsList/SkillsList';
+export { default as SkillsItem } from './SkillsItem/SkillsItem';
 export { default as Hero } from './Hero/Hero';
 export { default as Nav } from './Nav/Nav';
 export { default as MobileMenu } from './MobileMenu/MobileMenu';

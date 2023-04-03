@@ -11,7 +11,7 @@ export default function Hero() {
   const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
 
   return (
-    <Section id="home">
+    <Section id="home" fullHeight>
       <Container>
         <Content>
           <LeftSide>
@@ -25,8 +25,8 @@ export default function Hero() {
               </Title>
               <Subtitle>
                 {isTablet
-                  ? "Like a tiny hummingbird, I'm flying in search of new challenges and opportunities. I'm always on the move and buzzing with energy and enthusiasm. So if you're looking for a motivated candidate to join your team, I'm ready to spread my wings and take flight towards success."
-                  : "If you're looking for an enthusiastic candidate to join your team, I'm ready to work hard and strive towards success."}
+                  ? "Like a tiny hummingbird, I'm flying in search of new challenges and opportunities. I'm always on the move and buzzing with energy and enthusiasm. So if you're looking for a motivated candidate to join your team, I'm ready to spread my wings and take flight toward success."
+                  : "If you're looking for an enthusiastic candidate to join your team, I'm ready to work hard and strive toward success."}
               </Subtitle>
               <Button as={Link} to="projects" smooth={true} duration={500}>
                 Check out projects
