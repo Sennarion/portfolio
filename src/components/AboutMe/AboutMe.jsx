@@ -23,7 +23,7 @@ export default function AboutMe() {
   return (
     <Section id="about">
       <Container>
-        <Title>About</Title>
+        <Title>About me</Title>
         <Content>
           <Description>
             <Avatar>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const List = styled.ul``;
 
 export const ListItem = styled.li`
-  padding: ${({ theme }) => theme.spacing(2)};
+  padding: ${({ theme }) => theme.spacing(3)};
 
   &:not(:last-of-type) {
     border-bottom: 2px dotted ${({ theme }) => theme.colors.secondaryBlue};
@@ -32,3 +32,7 @@ export const Info = styled.p`
 `;
 
 export const Achievement = styled.p``;
+
+export const AchievementLabel = styled.span`
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+`;

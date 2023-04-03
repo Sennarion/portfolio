@@ -5,6 +5,7 @@ import {
   Description,
   Info,
   Achievement,
+  AchievementLabel,
   ResponsibilitiesList,
   ResponsibilitiesItem
 } from './Experience.styled';
@@ -26,7 +27,10 @@ export default function Experience() {
               ))}
             </ResponsibilitiesList>
           </Description>
-          <Achievement>Achievement: {achievement}</Achievement>
+          <Achievement>
+            <AchievementLabel>Achievement: </AchievementLabel>
+            {achievement}
+          </Achievement>
         </ListItem>
       ))}
     </List>

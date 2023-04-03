@@ -7,7 +7,7 @@ export const ListItem = styled.li`
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.grey};
   border: 2px solid ${({ theme }) => theme.colors.grey};
-  border-radius: ${({ theme }) => theme.spacing(4)} ${({ theme }) => theme.spacing(2)};
+  border-radius: ${({ theme }) => theme.radius(2)};
   overflow: hidden;
 
   transition: box-shadow ${({ theme }) => theme.animation.cubicBezier},
@@ -69,11 +69,8 @@ export const Link = styled.a`
   background-color: ${({ theme }) => theme.colors.white};
   transition: background-color ${({ theme }) => theme.animation.cubicBezier},
     box-shadow ${({ theme }) => theme.animation.cubicBezier};
-  border-radius: ${({ theme }) => theme.spacing(3)} ${({ theme }) => theme.spacing(1)};
-
-  svg {
-    fill: ${({ theme }) => theme.colors.grey};
-  }
+  border-radius: ${({ theme }) => theme.radius(1)};
+  color: ${({ theme }) => theme.colors.grey};
 
   &:hover,
   &:focus {

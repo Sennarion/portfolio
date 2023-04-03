@@ -12,7 +12,7 @@ export const AccordionHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${({ theme }) => theme.spacing(2)};
+  padding: ${({ theme }) => theme.spacing(3)};
   cursor: pointer;
   background: ${({ theme }) => theme.colors.grey};
 
