@@ -70,10 +70,7 @@ export const Link = styled.a`
   transition: background-color ${({ theme }) => theme.animation.cubicBezier},
     box-shadow ${({ theme }) => theme.animation.cubicBezier};
   border-radius: ${({ theme }) => theme.radius(1)};
-
-  svg {
-    fill: ${({ theme }) => theme.colors.grey};
-  }
+  color: ${({ theme }) => theme.colors.grey};
 
   &:hover,
   &:focus {
