@@ -78,7 +78,6 @@ export const TitleAccent = styled.span`
   background-clip: border-box;
   background-size: 200% auto;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: ${textclip} 3s linear infinite reverse;

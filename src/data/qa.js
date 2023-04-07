@@ -28,5 +28,10 @@ export const qa = [
     question: 'What am I looking for in my next job and employer?',
     answer:
       'I am seeking an opportunity to utilize the skills I acquired during my studies. Career advancement prospects are important to me, and I am hoping to secure a job that allows me to enhance my coding abilities.'
+  },
+  {
+    question: 'What is my level of English?',
+    answer:
+      'I rate my English level as intermediate, but to be honest, my speaking English level is pre-intermediate. However, I am actively working to improve my English skills.'
   }
 ];
