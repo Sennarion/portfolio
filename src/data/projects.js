@@ -4,6 +4,7 @@ import project3 from '../assets/project3.png';
 import project4 from '../assets/project4.png';
 import project5 from '../assets/project5.png';
 import project6 from '../assets/project6.png';
+import project7 from '../assets/project7.png';
 
 export const projects = [
   {
@@ -80,5 +81,15 @@ export const projects = [
     isPersonal: true,
     description:
       'This is a simple website that I created to learn HTML and CSS. The site is adaptive for three types of devices: phone, tablet, and desktop. All images are responsive. The crop technique is used for downloading various images for every screen. All icons are collected in an SVG sprite.'
+  },
+  {
+    name: 'Rick and Morty API',
+    stack: ['HTML', 'CSS', 'Vanilla JS', 'Axios', 'Handlebars'],
+    pageLink: 'https://sennarion.github.io/The-Rick-and-Morty-API/',
+    codeLink: 'https://github.com/Sennarion/The-Rick-and-Morty-API',
+    img: project7,
+    isPersonal: true,
+    description:
+      'This web application enables users to search for characters from "Rick and Morty" through The Rick and Morty API. It displays character information such as their name, species, gender, status, and image, and offers options to filter characters by gender or status. Additionally, pagination is available to make browsing easier.'
   }
 ];
