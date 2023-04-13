@@ -55,7 +55,15 @@ export const skills = [
   {
     title: 'TypeScript',
     icon: SiTypescript,
-    abilities: ['basic types', 'advanced types', 'generics']
+    abilities: [
+      'basic types',
+      'unions and intersections',
+      'types and interfaces',
+      'tuples and enums',
+      'narrowing and type guards',
+      'literal types',
+      'generics'
+    ]
   },
   {
     title: 'React',
