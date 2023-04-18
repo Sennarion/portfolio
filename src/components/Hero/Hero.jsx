@@ -7,8 +7,8 @@ import { theme } from '~/styles/theme';
 import { Content, LeftSide, RightSide, Title, Subtitle, TitleAccent } from './Hero.styled';
 
 export default function Hero() {
-  const isDesktop = useMediaQuery(`(min-width: ${theme.media.desktop})`);
-  const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
+  const isDesktop = useMediaQuery(theme.media.desktop);
+  const isTablet = useMediaQuery(theme.media.tablet);
 
   return (
     <Section id="home" fullHeight>

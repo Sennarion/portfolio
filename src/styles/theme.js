@@ -16,7 +16,6 @@ export const theme = Object.freeze({
       'linear-gradient(45deg, rgba(0, 208, 80, 0.9) 0%, rgba(228, 255, 0, 0.9) 40%, rgba(228, 255, 0, 0.9) 100%)',
     bgGradient: 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)'
   },
-  radius: (multiplier) => `${multiplier * 8}px ${multiplier * 4}px`,
   fonts: {
     primary: 'Montserrat, sans-serif',
     secondary: 'Pacifico, cursive'
@@ -38,6 +37,7 @@ export const theme = Object.freeze({
     large: 2.0
   },
   spacing: (value) => `${4 * value}px`,
+  radius: (multiplier) => `${multiplier * 8}px ${multiplier * 4}px`,
   animation: {
     cubicBezier: '0.2s cubic-bezier(0.7, 0.98, 0.86, 0.98)'
   },

@@ -5,7 +5,7 @@ import { theme } from '~/styles/theme';
 import { StyledHeader, HeaderContent, Logo } from './Header.styled';
 
 export default function Header({ toggleMenu, isMenuOpen }) {
-  const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
+  const isTablet = useMediaQuery(theme.media.tablet);
 
   return (
     <StyledHeader>

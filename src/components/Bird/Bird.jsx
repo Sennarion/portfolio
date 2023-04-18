@@ -12,7 +12,7 @@ export default function Bird(props) {
     actions['Animation'].play();
   }, [actions]);
 
-  const isDesktop = useMediaQuery(`(min-width: ${theme.media.desktop})`);
+  const isDesktop = useMediaQuery(theme.media.desktop);
 
   return (
     <group ref={group} {...props} dispose={null} scale={isDesktop ? 150 : 100}>

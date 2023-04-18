@@ -14,7 +14,7 @@ import {
 import { GlobalStyleComponent } from '~/styles/GlobalStyles.styled';
 
 export default function App() {
-  const isTablet = useMediaQuery(`(min-width: ${theme.media.tablet})`);
+  const isTablet = useMediaQuery(theme.media.tablet);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
