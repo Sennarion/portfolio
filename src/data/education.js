@@ -1,8 +1,14 @@
 export const education = [
   {
+    title: 'Udemy',
+    period: 'In progress',
+    field: 'The Complete Modern TypeScript Course',
+    link: 'https://www.udemy.com/course/modern_typescript/'
+  },
+  {
     title: 'IT School GoIT (IT Generation)',
     period: '2022-2023',
-    field: 'Front End Bootcamp Course (390+ hours of coding)',
+    field: 'Front End Bootcamp Course (400+ hours of coding)',
     certificate: 'https://drive.google.com/file/d/12iilxwTTOAENZQwkEFYTgSbhDmX8ZDfJ/view'
   },
   {

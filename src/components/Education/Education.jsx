@@ -10,11 +10,12 @@ import {
 } from './Education.styled';
 import { education } from '~/data/education';
 import { TbCertificate } from 'react-icons/tb';
+import { SiUdemy } from 'react-icons/si';
 
 export default function Education() {
   return (
     <List>
-      {education.map(({ title, period, field, certificate }) => (
+      {education.map(({ title, period, field, certificate, link }) => (
         <ListItem key={field}>
           <LeftSide>
             <Title>{title}</Title>
@@ -26,6 +27,14 @@ export default function Education() {
               <TbCertificate size={40} />
               <Link href={certificate} target="_blank">
                 Certificate
+              </Link>
+            </RightSide>
+          )}
+          {link && (
+            <RightSide>
+              <SiUdemy size={40} />
+              <Link href={link} target="_blank">
+                Materials
               </Link>
             </RightSide>
           )}
