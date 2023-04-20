@@ -8,6 +8,16 @@ import project7 from '../assets/project7.png';
 
 export const projects = [
   {
+    name: 'FlexyPlanner (commercial project)',
+    stack: ['HTML', 'CSS', 'SASS', 'Vanilla JS', 'Axios', 'Parcel'],
+    pageLink: 'https://flexyplanner.com/',
+    codeLink: 'https://github.com/iargina/FlexyPlanner',
+    img: project4,
+    isPersonal: false,
+    description:
+      'A website for presenting and selling personal diaries. As a developer, I worked on several aspects, including integrating the Nova Poshta API for delivery, showcasing diary features, and adding animations and accordions.'
+  },
+  {
     name: 'PizzaTime',
     stack: ['React', 'React Router', 'Redux Toolkit', 'Firebase', 'Emotion', 'Material UI'],
     pageLink: 'https://sennarion.github.io/pizzatime/',
@@ -32,7 +42,7 @@ export const projects = [
     img: project2,
     isPersonal: false,
     description:
-      "It's a finance app that tracks income and expenses, making money management simple and fast. As a team lead, I created a Redux store and developed async operations for transactions. I worked on modals, input validation, navigation, routes and redirects."
+      "It's a finance app that tracks income and expenses, making money management simple and fast. As a team lead and developer, I created a Redux store and developed async operations for transactions. I worked on modals, input validation, navigation, routes and redirects."
   },
   {
     name: 'ContactsHub',
@@ -52,16 +62,7 @@ export const projects = [
     description:
       'It’s an app that helps users manage contacts more efficiently with a simple interface to create, edit, and delete contacts, and search by name. It includes user authentication and registration, and all contacts are stored in a backend database for easy access.'
   },
-  {
-    name: 'FlexyPlanner',
-    stack: ['HTML', 'CSS', 'SASS', 'Vanilla JS', 'Axios', 'Parcel'],
-    pageLink: 'https://flexyplanner.com/',
-    codeLink: 'https://github.com/iargina/FlexyPlanner',
-    img: project4,
-    isPersonal: false,
-    description:
-      'A website for presenting and selling personal diaries. As a developer, I worked on several aspects, including integrating the Nova Poshta API for delivery, showcasing diary features, and adding animations and accordions.'
-  },
+
   {
     name: 'Filmoteka',
     stack: ['HTML', 'CSS', 'SASS', 'Vanilla JS', 'Axios', 'Parcel'],

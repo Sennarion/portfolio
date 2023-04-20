@@ -12,7 +12,7 @@ export const qa = [
   {
     question: 'What are my salary expectations?',
     answer:
-      'Based on my research and my proficiency in JavaScript, React, and Markup, I believe that a salary range of $400 to $700 would be appropriate for me.'
+      "Based on my research and my proficiency in JavaScript, React, and Markup, I believe that a salary starting from $400 would be appropriate for me. However, the final salary range may depend on the specific requirements and responsibilities of the position, as well as the company's compensation policies."
   },
   {
     question: 'What are my career goals?',
@@ -32,6 +32,6 @@ export const qa = [
   {
     question: 'What is my level of English?',
     answer:
-      'I rate my English level as intermediate, but to be honest, my speaking English level is pre-intermediate. However, I am actively working to improve my English skills.'
+      'My English level is intermediate. I understand that being proficient in English can open up a world of opportunities for me, and I am actively working to improve my English skills.'
   }
 ];

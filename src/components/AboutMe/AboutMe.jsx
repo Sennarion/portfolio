@@ -13,7 +13,7 @@ import {
   TabButton,
   TabsContent
 } from './AboutMe.styled';
-import { IoLocation, IoMail } from 'react-icons/io5';
+import { IoMail } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 import { BsGithub, BsTelegram, BsLinkedin } from 'react-icons/bs';
 
@@ -30,10 +30,6 @@ export default function AboutMe() {
               <img src={avatar} alt="avatar" width={600} />
             </Avatar>
             <Contacts>
-              <Contact>
-                <IoLocation size={20} />
-                Voznesensk (ready to relocate)
-              </Contact>
               <Contact>
                 <IoIosCall size={20} />
                 <ContactLink href="tel:+380990648414">+38 099 064 84 14</ContactLink>
