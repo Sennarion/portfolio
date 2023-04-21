@@ -1,6 +1,6 @@
 import { BsDownload } from 'react-icons/bs';
 import { Button } from '~/components';
-import cv from '~/assets/Reznichenko_Serhii.pdf';
+import cv from '~/assets/Serhii_Reznichenko_CV.pdf';
 import { nav } from '~/data/nav';
 import { NavWrapper, NavList, NavItem, NavLink } from './Nav.styled';
 

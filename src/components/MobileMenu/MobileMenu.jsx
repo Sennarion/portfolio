@@ -1,7 +1,7 @@
 import { BsDownload } from 'react-icons/bs';
 import { Container, Button, Social } from '~/components';
 import { Menu, Content, LinksList, LinksItem, NavLink } from './MobileMenu.styled';
-import cv from '~/assets/Reznichenko_Serhii.pdf';
+import cv from '~/assets/Serhii_Reznichenko_CV.pdf';
 import { nav } from '~/data/nav';
 
 export default function MobileMenu({ toggleMenu, isOpen }) {
