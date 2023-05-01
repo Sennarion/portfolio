@@ -1,15 +1,8 @@
-import {
-  SiRedux,
-  SiTypescript,
-  SiStyledcomponents,
-  SiJavascript,
-  SiFigma,
-  SiMui
-} from 'react-icons/si';
+import { SiRedux, SiTypescript, SiJavascript } from 'react-icons/si';
 import { BsGit } from 'react-icons/bs';
 import { DiCss3 } from 'react-icons/di';
 import { AiFillHtml5 } from 'react-icons/ai';
-import { IoLibrary, IoLogoReact } from 'react-icons/io5';
+import { IoLogoReact } from 'react-icons/io5';
 import { GoTools } from 'react-icons/go';
 
 export const skills = [
@@ -19,7 +12,7 @@ export const skills = [
     abilities: [
       'tags and attributes',
       'semantic structure',
-      'accessibility and validation',
+      'validation and accessibility',
       'text and images',
       'forms and tables',
       'links and buttons'
@@ -29,12 +22,12 @@ export const skills = [
     title: 'CSS3',
     icon: DiCss3,
     abilities: [
+      'cross-browser compatibility',
+      'responsive/adaptive layout',
       'box model and positioning',
       'layout techniques (flexbox, grid)',
       'pseudo-elements and pseudo-classes',
       'preprocessors (SASS, SCSS)',
-      'cross-browser compatibility',
-      'responsive/adaptive layout',
       'transitions and animations',
       'BEM methodology'
     ]
@@ -81,30 +74,10 @@ export const skills = [
     title: 'Redux',
     icon: SiRedux,
     abilities: [
-      'toolkit, store and slices',
+      'store and slices',
       'actions, reducers, selectors',
       'asynchronous operations',
       'devtools and debugging'
-    ]
-  },
-  {
-    title: 'Styled Components',
-    icon: SiStyledcomponents,
-    abilities: [
-      'global styles',
-      'props and dynamic styles',
-      'theming and keyframes',
-      'reusable components'
-    ]
-  },
-  {
-    title: 'Material UI',
-    icon: SiMui,
-    abilities: [
-      'layout, data display and surfaces',
-      'inputs and feedback',
-      'navigation and utils',
-      'components API and customization'
     ]
   },
   {
@@ -119,36 +92,16 @@ export const skills = [
     ]
   },
   {
-    title: 'Figma',
-    icon: SiFigma,
-    abilities: [
-      'components and graphic elements',
-      'layer organization and styles',
-      'formats and resolutions'
-    ]
-  },
-  {
-    title: 'Some Libraries',
-    icon: IoLibrary,
-    abilities: [
-      'axios',
-      'formik, yup',
-      'toastify, notiflix',
-      'emotion, bootstrap',
-      'react-transition-group, framer-motion',
-      'lodash, handlebars',
-      'persist, date-fns'
-    ]
-  },
-  {
     title: 'Other Tools',
     icon: GoTools,
     abilities: [
-      'visual studio code',
+      'emotion, styled components',
+      'material ui',
+      'axios, formik, yup',
+      'figma, netlify',
       'webpack, parcel, gulp, vite',
       'firebase, swagger, postman',
-      'prettier, eslint',
-      'netlify, gh-pages'
+      'prettier, eslint'
     ]
   }
 ];

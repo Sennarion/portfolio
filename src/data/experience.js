@@ -4,9 +4,8 @@ export const experience = [
     company: 'Self-employment, Part-time',
     period: 'mar 2022 - till now',
     responsibilities: [
-      'design development for outdoor advertising',
-      'design of printed materials',
-      'have experience in designing web applications*'
+      'design development for outdoor advertising and printed material',
+      'experience in web application design development'
     ],
     achievement: 'designed the largest central billboards in my city'
   },
