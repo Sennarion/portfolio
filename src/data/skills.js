@@ -95,11 +95,11 @@ export const skills = [
     title: 'Other Tools',
     icon: GoTools,
     abilities: [
+      'next.js, vite',
       'emotion, styled components',
       'material ui',
-      'axios, formik, yup',
-      'figma, netlify',
-      'webpack, parcel, gulp, vite',
+      'axios, formik, react hook form, yup',
+      'gsap',
       'firebase, swagger, postman',
       'prettier, eslint'
     ]

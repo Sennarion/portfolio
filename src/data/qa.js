@@ -12,7 +12,7 @@ export const qa = [
   {
     question: 'What are my salary expectations?',
     answer:
-      "Based on my research and my proficiency in JavaScript, React, and Markup, I believe that a salary starting from $400 would be appropriate for me. However, the final salary range may depend on the specific requirements and responsibilities of the position, as well as the company's compensation policies."
+      "Based on my research and my proficiency in JavaScript, React, and Markup, I believe that a salary starting from $800 would be appropriate for me. However, the final salary range may depend on the specific requirements and responsibilities of the position, as well as the company's compensation policies."
   },
   {
     question: 'What are my career goals?',

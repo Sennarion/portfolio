@@ -27,10 +27,12 @@ export default function Experience() {
               ))}
             </ResponsibilitiesList>
           </Description>
-          <Achievement>
-            <AchievementLabel>Achievement: </AchievementLabel>
-            {achievement}
-          </Achievement>
+          {achievement && (
+            <Achievement>
+              <AchievementLabel>Achievement: </AchievementLabel>
+              {achievement}
+            </Achievement>
+          )}
         </ListItem>
       ))}
     </List>

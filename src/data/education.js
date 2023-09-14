@@ -1,9 +1,9 @@
 export const education = [
   {
     title: 'Udemy',
-    period: 'In progress',
+    period: '2023',
     field: 'The Complete Modern TypeScript Course',
-    link: 'https://www.udemy.com/course/modern_typescript/'
+    link: 'https://www.udemy.com/certificate/UC-c9c04fd1-532f-4b04-8a5d-44bedfffeb8a/'
   },
   {
     title: 'IT School GoIT (IT Generation)',

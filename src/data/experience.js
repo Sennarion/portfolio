@@ -1,8 +1,19 @@
 export const experience = [
   {
+    title: 'Junior frontend developer',
+    company: 'Glivera Team',
+    period: 'apr 2023 - till now',
+    responsibilities: [
+      'responsive, adaptive, cross-browser, pixel-perfect layout',
+      'developing and implementing highly responsive user interface components using react concepts',
+      'fixing and refactoring of existing components',
+      'collaborating with other developers'
+    ]
+  },
+  {
     title: 'Graphic Designer',
     company: 'Self-employment, Part-time',
-    period: 'mar 2022 - till now',
+    period: 'mar 2022 - apr 2023',
     responsibilities: [
       'design development for outdoor advertising and printed material',
       'experience in web application design development'
